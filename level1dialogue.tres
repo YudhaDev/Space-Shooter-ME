@@ -1,0 +1,96 @@
+[gd_resource type="Resource" script_class="DialogueData" load_steps=2 format=3 uid="uid://bdanno4wou6kg"]
+
+[ext_resource type="Script" path="res://addons/dialogue_nodes/objects/DialogueData.gd" id="1_m4laf"]
+
+[resource]
+script = ExtResource("1_m4laf")
+starts = {
+"level1-1": &"0_1"
+}
+nodes = {
+"0_1": {
+"link": &"1_1",
+"offset": Vector2(-220, -80),
+"start_id": "level1-1"
+},
+"1_1": {
+"dialogue": "Ugh kamar sensei berantakan. Baiklah akan aku bersihkan sekarang!",
+"offset": Vector2(-20, -140),
+"options": {
+0: {
+"condition": {},
+"link": &"1_2",
+"text": ""
+}
+},
+"size": Vector2(300, 241),
+"speaker": "Arisu"
+},
+"1_2": {
+"dialogue": "Arisu pun bersiap untuk membersihkan kamar sensei.",
+"offset": Vector2(660, -180),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(300.001, 241),
+"speaker": "Narator"
+},
+"1_3": {
+"dialogue": "",
+"offset": Vector2(680, 160),
+"options": {
+0: {
+"condition": {},
+"link": &"1_4",
+"text": ""
+}
+},
+"size": Vector2(308.471, 241),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "vrmmm vrmmm vrmmm",
+"offset": Vector2(1000, -200),
+"options": {
+0: {
+"condition": {},
+"link": &"1_5",
+"text": ""
+}
+},
+"size": Vector2(300.002, 241),
+"speaker": "Vacuum"
+},
+"1_5": {
+"dialogue": "Bendah apa itu?! Musuh terdekteksi!",
+"offset": Vector2(1320, -40),
+"options": {
+0: {
+"condition": {},
+"link": &"3_1",
+"text": ""
+}
+},
+"size": Vector2(300.002, 241),
+"speaker": "Arisu"
+},
+"3_1": {
+"link": "END",
+"offset": Vector2(1700, 120),
+"signalValue": "levelStart"
+}
+}
+variables = {
+"start": {
+"type": 1,
+"value": true
+}
+}
+comments = Array[String]([])
+strays = Array[String](["1_3"])
+characters = "Arisu,Narator,Vacuum,Evil Vacuum
+"

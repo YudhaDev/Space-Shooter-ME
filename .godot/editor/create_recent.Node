@@ -1,0 +1,14 @@
+Sprite2D
+TileMap
+Timer
+CharacterBody2D
+Area2D
+StaticBody2D
+CollisionShape2D
+RigidBody2D
+DialogueBox
+Panel
+Control
+Marker2D
+Node2D
+CollisionPolygon2D

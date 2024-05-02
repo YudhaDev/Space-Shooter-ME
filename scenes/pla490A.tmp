@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bti0gpwlyo1jt"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_1j4ph"]
+[ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1uxcr"]
+radius = 102.665
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_43cib"]
+radius = 865.826
+
+[node name="player" type="CharacterBody2D"]
+scale = Vector2(0.38, 0.38)
+script = ExtResource("1_1j4ph")
+player_speed = null
+
+[node name="player_image" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("1_7k0sv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1uxcr")
+
+[node name="PlayerProjectilesPawnMarker1" type="Marker2D" parent="."]
+position = Vector2(120, 0)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_43cib")
+debug_color = Color(0.627249, 0.525377, 0.220724, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

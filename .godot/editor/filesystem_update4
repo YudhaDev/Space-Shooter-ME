@@ -1,0 +1,7 @@
+res://scenes/level.tscn
+res://examples/Characters.tres
+res://scenes/player.tscn
+res://scenes/projectile.tscn
+res://examples/Demo2.tscn
+res://scenes/enemy_1.tscn
+res://scenes/enemy_1_debug.tscn
