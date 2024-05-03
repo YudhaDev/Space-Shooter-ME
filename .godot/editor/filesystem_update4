@@ -1,7 +1,14 @@
-res://scenes/level.tscn
+res://scenes/obstacle_base.tscn
 res://examples/Characters.tres
+res://scenes/player.gd
 res://scenes/player.tscn
+res://scenes/level.tscn
 res://scenes/projectile.tscn
 res://examples/Demo2.tscn
 res://scenes/enemy_1.tscn
 res://scenes/enemy_1_debug.tscn
+res://scenes/projectile.gd
+res://scenes/level.gd
+res://obstacle_base.gd
+res://scenes/obstacle_fire.tscn
+res://scenes/obstacle_fire.gd

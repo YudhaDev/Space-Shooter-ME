@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bti0gpwlyo1jt"]
+[gd_scene load_steps=6 format=3 uid="uid://bti0gpwlyo1jt"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_1j4ph"]
 [ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
+[ext_resource type="Texture2D" uid="uid://bxj3bxr7n1b2p" path="res://images/weapon1.jpg" id="2_lagyq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1uxcr"]
 radius = 102.665
@@ -9,9 +10,19 @@ radius = 102.665
 [sub_resource type="CircleShape2D" id="CircleShape2D_43cib"]
 radius = 865.826
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 scale = Vector2(0.38, 0.38)
 script = ExtResource("1_1j4ph")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(2.63158, 0)
+
+[node name="player_weapon_image" type="Sprite2D" parent="Node2D"]
+scale = Vector2(0.0890899, 0.0194932)
+texture = ExtResource("2_lagyq")
+
+[node name="PlayerProjectilesPawnMarker1" type="Marker2D" parent="Node2D"]
+position = Vector2(120, 0)
 
 [node name="player_image" type="Sprite2D" parent="."]
 rotation = 1.5708
@@ -20,19 +31,21 @@ texture = ExtResource("1_7k0sv")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1uxcr")
 
-[node name="PlayerProjectilesPawnMarker1" type="Marker2D" parent="."]
-position = Vector2(120, 0)
-
 [node name="DetectingEnemy" type="Area2D" parent="."]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectingEnemy"]
+position = Vector2(2.63158, 2.63158)
 shape = SubResource("CircleShape2D_43cib")
 debug_color = Color(0.627249, 0.525377, 0.220724, 0.42)
 
 [node name="TimerTargeting" type="Timer" parent="."]
 autostart = true
 
+[node name="TimerTembak" type="Timer" parent="."]
+autostart = true
+
 [connection signal="body_entered" from="DetectingEnemy" to="." method="_on_detecting_enemy_body_entered"]
 [connection signal="body_exited" from="DetectingEnemy" to="." method="_on_detecting_enemy_body_exited"]
 [connection signal="timeout" from="TimerTargeting" to="." method="_on_timer_targeting_timeout"]
+[connection signal="timeout" from="TimerTembak" to="." method="_on_timer_tembak_timeout"]

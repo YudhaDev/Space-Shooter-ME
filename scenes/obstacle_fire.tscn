@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb6bqtc56wljn"]
+
+[ext_resource type="Script" path="res://scenes/obstacle_fire.gd" id="1_60jfv"]
+[ext_resource type="Texture2D" uid="uid://p5ruypu5p2i0" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png" id="1_bv2h2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_amesi"]
+size = Vector2(100, 94)
+
+[node name="obstacle_fire" type="Area2D"]
+script = ExtResource("1_60jfv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_bv2h2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_amesi")
+
+[node name="TimerDamageOverTime" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="TimerDamageOverTime" to="." method="_on_timer_damage_over_time_timeout"]

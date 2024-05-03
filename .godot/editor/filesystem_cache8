@@ -1,9 +1,10 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1714661317
-enemy_1_debug.gd::GDScript::-1::1714213054::0::1::::<>CharacterBody2D<>::
+::res://::1714669615
+enemy_1_debug.gd::GDScript::-1::1714668436::0::1::::<>CharacterBody2D<>::
 export_presets.cfg::TextFile::-1::1714236777::0::1::::<><>::
 icon.svg::CompressedTexture2D::3110761336163890324::1714036905::1714037532::1::::<><>::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1714201126::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
+obstacle_base.gd::GDScript::-1::1714668437::0::1::::<>Area2D<>::
 ::res://addons/::1714227892
 ::res://addons/better-terrain/::1714227895
 BetterTerrain.gd::GDScript::-1::1714227892::0::1::::<>Node<>::
@@ -120,10 +121,10 @@ tech.theme::Theme::7237156549206226654::1714130428::0::1::::<><>::uid://brjuyem5
 ::res://audios/bgm/::1714038164
 Pixel_Time.ogg::AudioStreamOggVorbis::4620137298302504884::1714038133::1714038164::1::::<><>::
 ::res://audios/sfx/::1714038192
-::res://examples/::1714229538
+::res://examples/::1714669020
 audioDemo.gd::GDScript::-1::1714130430::0::1::::<>Control<>::
-Characters.tres::Resource/CharacterList::7778104419182407793::1714228597::0::1::::<><>::res://addons/dialogue_nodes/objects/CharacterList.gd<>res://addons/dialogue_nodes/objects/Character.gd<>uid://b2hbqv3slgfxt::::res://examples/profile0.png
-Demo2.tscn::PackedScene::7487747640125696941::1714229538::0::1::::<><>::res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>res://examples/audioDemo.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://c4ay241u6mexj::::res://examples/ExampleAudio.tres<>uid://bin1ei6yesmjv::::res://examples/voice.ogg
+Characters.tres::Resource/CharacterList::7778104419182407793::1714668436::0::1::::<><>::res://addons/dialogue_nodes/objects/CharacterList.gd<>res://addons/dialogue_nodes/objects/Character.gd<>uid://b2hbqv3slgfxt::::res://examples/profile0.png
+Demo2.tscn::PackedScene::7487747640125696941::1714669020::0::1::::<><>::res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>res://examples/audioDemo.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://c4ay241u6mexj::::res://examples/ExampleAudio.tres<>uid://bin1ei6yesmjv::::res://examples/voice.ogg
 demo.gd::GDScript::-1::1714130430::0::1::::<>Control<>::
 Demo.tscn::PackedScene::3953196385162369597::1714130429::0::1::::<><>::res://examples/demo.gd<>uid://dj818hys8f3u8::::res://examples/ExampleBasic.tres<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>uid://btriowhsx04c2::::res://examples/ExampleBBCodes.tres<>uid://bjme2drtas671::::res://examples/ExampleBranching.tres<>uid://c303qivlsn30t::::res://examples/ExampleCharacters.tres<>uid://b4os1qum2hx0x::::res://examples/ExampleSignals.tres<>uid://cbu4k4hs8fk5s::::res://examples/ExampleVariables.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://dp3enlibqhftj::::res://myDialogue.tres
 ExampleAudio.tres::Resource/Resource::6809824821443649527::1714189031::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
@@ -136,11 +137,12 @@ ExampleSignals.tres::Resource/Resource::4451938646115500077::1714130430::0::1:::
 ExampleVariables.tres::Resource/Resource::4886097951687637358::1714130430::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 profile0.png::CompressedTexture2D::4296060542971295061::1714130431::1714130432::1::::<><>::
 voice.ogg::AudioStreamOggVorbis::2976354597759940103::1714130431::1714130432::1::::<><>::
-::res://images/::1714228355
+::res://images/::1714668609
 Alice_Icon_resave.png::CompressedTexture2D::9220265421556530489::1714037597::1714037608::1::::<><>::
 bg.jpg::CompressedTexture2D::1193434831214432977::1714038733::1714038734::1::::<><>::
 kswx2oD.png::CompressedTexture2D::3931238290495880847::1714039109::1714039112::1::::<><>::
 projectile1.jpg::CompressedTexture2D::2995599569149644960::1714129255::1714129260::1::::<><>::
+weapon1.jpg::CompressedTexture2D::4021046584516808073::1714668604::1714668609::1::::<><>::
 ::res://images/Sprout Lands - Sprites - Basic pack/::1714228355
 read_me.txt::TextFile::-1::1714228355::0::1::::<><>::
 ::res://images/Sprout Lands - Sprites - Basic pack/Characters/::1714228359
@@ -173,13 +175,14 @@ Hills.png::CompressedTexture2D::7420510163325450946::1714228355::1714228359::1::
 Tilled_Dirt.png::CompressedTexture2D::7173490887473602166::1714228355::1714228359::1::::<><>::
 Water.png::CompressedTexture2D::3775445889360659788::1714228355::1714228359::1::::<><>::
 Wooden House.png::CompressedTexture2D::1115833176629296173::1714228355::1714228359::1::::<><>::
-::res://scenes/::1714236902
+::res://scenes/::1714669363
 enemy_1.gd::GDScript::-1::1714203152::0::1::::<>CharacterBody2D<>::
-enemy_1.tscn::PackedScene::2683446640727357175::1714229538::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scenes/enemy_1.gd
-enemy_1_debug.tscn::PackedScene::8396343989244562977::1714229538::0::1::::<><>::res://enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
-level.gd::GDScript::-1::1714225708::0::1::::<>Node2D<>::
-level.tscn::PackedScene::8173735547742905955::1714236902::0::1::::<><>::res://scenes/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://cxpg3f0y7ddg5::::res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png<>uid://ddysyojx15s3s::::res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png
-player.gd::GDScript::-1::1714225475::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3738053196799177213::1714229538::0::1::::<><>::res://scenes/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png
+enemy_1.tscn::PackedScene::2683446640727357175::1714669020::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scenes/enemy_1.gd
+enemy_1_debug.tscn::PackedScene::8396343989244562977::1714669020::0::1::::<><>::res://enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
+level.gd::GDScript::-1::1714668437::0::1::::<>Node2D<>::
+level.tscn::PackedScene::8173735547742905955::1714669020::0::1::::<><>::res://scenes/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://cxpg3f0y7ddg5::::res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png<>uid://ddysyojx15s3s::::res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png
+obstacle_base.tscn::PackedScene::3064087434393164720::1714669363::0::1::::<><>::res://obstacle_base.gd<>uid://dn17b0a6wwgt7::::res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png
+player.gd::GDScript::-1::1714669020::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::3738053196799177213::1714669020::0::1::::<><>::res://scenes/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg
 projectile.gd::GDScript::-1::1714220333::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::2843286313954371500::1714229538::0::1::::<><>::res://scenes/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg
+projectile.tscn::PackedScene::2843286313954371500::1714669020::0::1::::<><>::res://scenes/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg

@@ -16,7 +16,7 @@ func _ready():
 	pass
 func _physics_process(delta):
 	if targeting_obj != null:
-		$player.look_at(targeting_obj.global_position)
+		$player.get_child(0).look_at(targeting_obj.global_position)
 	pass
 	
 

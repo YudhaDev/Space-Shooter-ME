@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dopoh3gw6objn"]
+[gd_scene load_steps=20 format=3 uid="uid://dopoh3gw6objn"]
 
 [ext_resource type="Script" path="res://scenes/level.gd" id="1_c84lo"]
 [ext_resource type="Texture2D" uid="uid://radxyc7tlbu4" path="res://images/bg.jpg" id="1_sjkot"]
@@ -7,8 +7,10 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="6_yd0ma"]
 [ext_resource type="Resource" uid="uid://bdanno4wou6kg" path="res://level1dialogue.tres" id="7_wced4"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="8_pdv0r"]
+[ext_resource type="PackedScene" uid="uid://bjwjcpwwhwbj1" path="res://scenes/obstacle_base.tscn" id="9_gv84e"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="9_qciv6"]
 [ext_resource type="Texture2D" uid="uid://cxpg3f0y7ddg5" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Grass.png" id="9_vmxrl"]
+[ext_resource type="PackedScene" uid="uid://bb6bqtc56wljn" path="res://scenes/obstacle_fire.tscn" id="10_a5271"]
 [ext_resource type="Texture2D" uid="uid://ddysyojx15s3s" path="res://images/Sprout Lands - Sprites - Basic pack/Tilesets/Hills.png" id="10_kq3vl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewham"]
@@ -155,6 +157,12 @@ script = ExtResource("6_yd0ma")
 dialogue_data = ExtResource("7_wced4")
 start_id = "level1-1"
 custom_effects = Array[RichTextEffect]([SubResource("RichTextEffect_3g1q8"), SubResource("RichTextEffect_gyxjj")])
+
+[node name="obstacle_base" parent="." instance=ExtResource("9_gv84e")]
+position = Vector2(262, 526)
+
+[node name="obstacle_fire" parent="." instance=ExtResource("10_a5271")]
+position = Vector2(459, 553)
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ton4b")

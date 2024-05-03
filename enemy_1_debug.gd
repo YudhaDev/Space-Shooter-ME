@@ -18,9 +18,9 @@ func _process(_delta):
 	#move_and_slide()
 	pass
 func getHit(damage:float, projectile_penetration:int):
-	print("damage"+str(damage)+", penetration"+str(projectile_penetration))
+	#print("damage"+str(damage)+", penetration"+str(projectile_penetration))
 	health_calculated -= damage
-	print(health_calculated)
+	#print(health_calculated)
 	if health_calculated <= 0:
 		destroy()
 	
