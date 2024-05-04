@@ -12,14 +12,14 @@ func _on_timer_timeout():
 	#print("timer sinyal")
 	
 func _ready():
-	$Control/dialogue_box.start()
-	pass
+	#$CanvasLayer/Control.start()
+	#$Control/dialogue_box.start()
+	$CanvasLayer/Control/dialogue_box.start()
+	
 func _physics_process(delta):
 	if targeting_obj != null:
 		$player.get_child(0).look_at(targeting_obj.global_position)
-	pass
 	
-
 #func _on_player_player_projectiles(pos):
 	##print(pos)
 	##print("player menembak")

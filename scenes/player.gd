@@ -24,6 +24,7 @@ func _physics_process(_delta):
 	
 	#$".".position += direction * player_speed * delta
 	$".".position += direction * player_speed
+	move_and_slide()
 	#$".".velocity = direction * player_speed * _delta
 	
 	#if direction != Vector2.ZERO:

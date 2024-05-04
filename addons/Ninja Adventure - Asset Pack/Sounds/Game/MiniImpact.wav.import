@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cnce7f4bhj81a"
+path="res://.godot/imported/MiniImpact.wav-b4dac3e6751754ae941da16265fd8e01.sample"
+
+[deps]
+
+source_file="res://addons/Ninja Adventure - Asset Pack/Sounds/Game/MiniImpact.wav"
+dest_files=["res://.godot/imported/MiniImpact.wav-b4dac3e6751754ae941da16265fd8e01.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
