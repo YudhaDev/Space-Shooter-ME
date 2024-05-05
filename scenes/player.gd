@@ -13,7 +13,7 @@ var _calculated_health :float = 50
 var auto_shoot = false
 
 func _ready():
-	pass
+	#print(str(current_enemies))
 	#position = Vector2(400, 400)
 
 func _physics_process(_delta):

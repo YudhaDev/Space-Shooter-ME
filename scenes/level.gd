@@ -4,6 +4,7 @@ extends Node2D
 var vacuum_pack:PackedScene = load("res://scenes/enemy_1.tscn")
 var player_projectiles_pack:PackedScene = load("res://scenes/projectile.tscn")
 var targeting_obj = null
+var current_enemies = []
 
 func _on_timer_timeout():
 	#instansiasi
@@ -12,14 +13,17 @@ func _on_timer_timeout():
 	#print("timer sinyal")
 	
 func _ready():
-	#$CanvasLayer/Control.start()
-	#$Control/dialogue_box.start()
+	current_enemies = $"../enemies".get_children()
 	$CanvasLayer/Control/dialogue_box.start()
 	
 func _physics_process(delta):
 	if targeting_obj != null:
 		$player.get_child(0).look_at(targeting_obj.global_position)
 	
+func checkingEnemies():
+	
+	pass
+
 #func _on_player_player_projectiles(pos):
 	##print(pos)
 	##print("player menembak")

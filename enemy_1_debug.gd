@@ -9,6 +9,8 @@ var health_calculated = 0
 var base_penetration_negate = 1
 var rng_direction_x:float = 0
 
+signal on_killed()
+
 func _ready():
 	health_calculated = base_health * health_modifier
 	pass
