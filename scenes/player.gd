@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var player_speed:float = 1
+@export var player_speed:float = 10
 #signal player_projectiles(pos)
 signal _player_targeting(obj)
 
@@ -13,17 +13,18 @@ var _calculated_health :float = 50
 var auto_shoot = false
 
 func _ready():
+	pass
 	#print(str(current_enemies))
 	#position = Vector2(400, 400)
 
-func _physics_process(_delta):
+func _physics_process(delta):
 	#Untuk control
 	var direction = Input.get_vector("left","right","up","down")
 	#print(direction)
 	
 	
 	#$".".position += direction * player_speed * delta
-	$".".position += direction * player_speed
+	$".".position += direction * player_speed * delta
 	move_and_slide()
 	#$".".velocity = direction * player_speed * _delta
 	

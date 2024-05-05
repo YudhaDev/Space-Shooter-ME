@@ -13,7 +13,7 @@ func _on_timer_timeout():
 	#print("timer sinyal")
 	
 func _ready():
-	current_enemies = $"../enemies".get_children()
+	current_enemies = $enemies.get_children()
 	$CanvasLayer/Control/dialogue_box.start()
 	
 func _physics_process(delta):
@@ -36,4 +36,12 @@ func checkingEnemies():
 
 func _on_player__player_targeting(obj):
 	targeting_obj = obj
+	pass # Replace with function body.
+
+
+func _on_timer_check_enemy_timeout():
+	current_enemies = $enemies.get_children()
+	if current_enemies.size() == 0:
+		print("Next Stage")
+		$UI/buff_selection.show()
 	pass # Replace with function body.
