@@ -4145,15 +4145,17 @@ script = ExtResource("8_pdv0r")
 [sub_resource type="RichTextEffect" id="RichTextEffect_gyxjj"]
 script = ExtResource("9_qciv6")
 
-[sub_resource type="NavigationPolygon" id="NavigationPolygon_cak2n"]
-outlines = Array[PackedVector2Array]([PackedVector2Array(26, 21, 275, 19, 464, 23, 859, 23, 856, 271, 863, 544, 806, 622, 414, 618, 22, 614, 25, 354)])
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_g7ub7"]
+vertices = PackedVector2Array(710, 328, 710, 327, 716, 625, 522, 233, 479, 198, 522, 190, 521, 146, 533, 154, 540, 276, 531, 381, 525, 622, 618, 268, 667, 268, 706, 275, 20, 265, 20, 19, 307, 23, 310, 104, 288, 214, 529, 77, 529, 120, 521, 120, 521, 14, 181, 619, 21, 618, 21, 428, 306, 392, 366, 621)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(3, 5, 8, 9), PackedInt32Array(0, 2, 10, 9, 8, 11, 12, 13), PackedInt32Array(14, 15, 16, 17, 18), PackedInt32Array(19, 20, 21, 17, 16, 22), PackedInt32Array(23, 24, 25, 26), PackedInt32Array(14, 18, 26, 25), PackedInt32Array(27, 23, 26, 9, 10)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(298, 214, 315, 382, 520, 372, 512, 238, 457, 193, 512, 182, 511, 127, 543, 149, 549, 265, 617, 258, 669, 258, 716, 267, 720, 327, 727, 636, 525, 632, 366.372, 630.766, 181.1, 629.324, 11, 628, 10.6767, 427.845, 10.4139, 265.218, 10.2174, 143.587, 10, 9, 307, 13, 530, 4, 539, 76, 539, 132, 318, 115)])
 source_geometry_group_name = &"navigation_polygon_source_group"
 
 [node name="level" type="Node2D"]
 script = ExtResource("1_c84lo")
 
 [node name="background" type="Sprite2D" parent="."]
-position = Vector2(511.784, -110.002)
+position = Vector2(506, -222)
 scale = Vector2(0.504279, 1.18982)
 texture = ExtResource("1_sjkot")
 
@@ -4275,7 +4277,23 @@ visible = false
 toLevel = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
-navigation_polygon = SubResource("NavigationPolygon_cak2n")
+navigation_polygon = SubResource("NavigationPolygon_g7ub7")
+constrain_avoidance = true
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(554, 399, 562, 465, 708, 467, 705, 406)
+
+[node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(325, 159, 385, 256, 329, 286, 321, 355, 510, 361, 509, 243, 449, 223, 441, 191, 443, 172, 505, 176, 495, 130, 325, 128)
+
+[node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(137, 393, 131, 309, 2, 312, 7, 404)
+
+[node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(544, -21, 553, 257, 671, 250, 671, 157, 665, 97, 614, 95, 617, -28)
+
+[node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="."]
+vertices = PackedVector2Array(720, 163, 726, 660, 806, 651, 795, 146)
 
 [connection signal="_player_targeting" from="player" to="." method="_on_player__player_targeting"]
 [connection signal="timeout" from="Timer Check Enemy" to="." method="_on_timer_check_enemy_timeout"]
