@@ -1,6 +1,5 @@
-res://examples/Characters.tres
-res://scenes/ui/buff_selection.tscn
 res://scenes/player.tscn
+res://examples/Characters.tres
 res://scenes/level.tscn
 res://scenes/projectile.tscn
 res://examples/Demo2.tscn
@@ -8,7 +7,6 @@ res://scenes/enemy_1.tscn
 res://scenes/enemy_1_debug.tscn
 res://scenes/obstacle_base.tscn
 res://scenes/obstacle_fire.tscn
-res://scenes/ui/buff_selection.gd
-res://scenes/player.gd
-res://enemy_1_debug.gd
-res://scenes/level.gd
+res://scenes/ui/buff_selection.tscn
+res://scenes/level2.tscn
+res://scripts/enemy_1_debug.gd

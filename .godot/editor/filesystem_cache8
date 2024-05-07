@@ -1,10 +1,8 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1714911058
-enemy_1_debug.gd::GDScript::-1::1714668436::0::1::::<>CharacterBody2D<>::
+::res://::1715090806
 export_presets.cfg::TextFile::-1::1714236777::0::1::::<><>::
 icon.svg::CompressedTexture2D::3110761336163890324::1714036905::1714037532::1::::<><>::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1714201126::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
-obstacle_base.gd::GDScript::-1::1714707141::0::1::::<>Area2D<>::
 ::res://addons/::1714827924
 ::res://addons/better-terrain/::1714227895
 BetterTerrain.gd::GDScript::-1::1714227892::0::1::::<>Node<>::
@@ -1795,10 +1793,10 @@ Wooden House.png::CompressedTexture2D::1115833176629296173::1714228355::17148279
 ::res://audios/bgm/::1714038164
 Pixel_Time.ogg::AudioStreamOggVorbis::4620137298302504884::1714038133::1714038164::1::::<><>::
 ::res://audios/sfx/::1714038192
-::res://examples/::1714832136
+::res://examples/::1715090522
 audioDemo.gd::GDScript::-1::1714130430::0::1::::<>Control<>::
-Characters.tres::Resource/CharacterList::7778104419182407793::1714827924::0::1::::<><>::res://addons/dialogue_nodes/objects/CharacterList.gd<>res://addons/dialogue_nodes/objects/Character.gd<>uid://b2hbqv3slgfxt::::res://examples/profile0.png
-Demo2.tscn::PackedScene::7487747640125696941::1714832136::0::1::::<><>::res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>res://examples/audioDemo.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://c4ay241u6mexj::::res://examples/ExampleAudio.tres<>uid://bin1ei6yesmjv::::res://examples/voice.ogg
+Characters.tres::Resource/CharacterList::7778104419182407793::1715088122::0::1::::<><>::res://addons/dialogue_nodes/objects/CharacterList.gd<>res://addons/dialogue_nodes/objects/Character.gd<>uid://b2hbqv3slgfxt::::res://examples/profile0.png
+Demo2.tscn::PackedScene::7487747640125696941::1715090522::0::1::::<><>::res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>res://examples/audioDemo.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://c4ay241u6mexj::::res://examples/ExampleAudio.tres<>uid://bin1ei6yesmjv::::res://examples/voice.ogg
 demo.gd::GDScript::-1::1714130430::0::1::::<>Control<>::
 Demo.tscn::PackedScene::3953196385162369597::1714130429::0::1::::<><>::res://examples/demo.gd<>uid://dj818hys8f3u8::::res://examples/ExampleBasic.tres<>uid://dc6c1peo4pfyr::::res://addons/dialogue_nodes/themes/bubbly.theme<>uid://btriowhsx04c2::::res://examples/ExampleBBCodes.tres<>uid://bjme2drtas671::::res://examples/ExampleBranching.tres<>uid://c303qivlsn30t::::res://examples/ExampleCharacters.tres<>uid://b4os1qum2hx0x::::res://examples/ExampleSignals.tres<>uid://cbu4k4hs8fk5s::::res://examples/ExampleVariables.tres<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://dp3enlibqhftj::::res://myDialogue.tres
 ExampleAudio.tres::Resource/Resource::6809824821443649527::1714189031::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
@@ -1817,17 +1815,25 @@ bg.jpg::CompressedTexture2D::1193434831214432977::1714038733::1714038734::1::::<
 kswx2oD.png::CompressedTexture2D::3931238290495880847::1714039109::1714039112::1::::<><>::
 projectile1.jpg::CompressedTexture2D::2995599569149644960::1714129255::1714129260::1::::<><>::
 weapon1.jpg::CompressedTexture2D::4021046584516808073::1714668604::1714668609::1::::<><>::
-::res://scenes/::1714832136
+::res://scenes/::1715090793
+enemy_1.tscn::PackedScene::2683446640727357175::1715090780::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scripts/enemy_1.gd
+enemy_1_debug.tscn::PackedScene::8396343989244562977::1715090793::0::1::::<><>::res://scripts/enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
+level2.tscn::PackedScene::429972890563365767::1715090780::0::1::::<><>::res://scripts/level2.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://scripts/TileMap2.gd<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn
+level.tscn::PackedScene::8173735547742905955::1715090780::0::1::::<><>::res://scripts/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://scripts/TileMap2.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn
+obstacle_base.tscn::PackedScene::3064087434393164720::1715090793::0::1::::<><>::res://scripts/obstacle_base.gd<>uid://dn17b0a6wwgt7::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png
+obstacle_fire.tscn::PackedScene::2520695529840859723::1715090780::0::1::::<><>::res://scripts/obstacle_fire.gd<>uid://p5ruypu5p2i0::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png
+player.tscn::PackedScene::3738053196799177213::1715090780::0::1::::<><>::res://scripts/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg
+projectile.tscn::PackedScene::2843286313954371500::1715090780::0::1::::<><>::res://scripts/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg
+::res://scenes/ui/::1715090523
+buff_selection.gd::GDScript::-1::1714922399::0::1::::<>Control<>::
+buff_selection.tscn::PackedScene::359671253519145880::1715090523::0::1::::<><>::res://scenes/ui/buff_selection.gd
+::res://scripts/::1715090793
 enemy_1.gd::GDScript::-1::1714203152::0::1::::<>CharacterBody2D<>::
-enemy_1.tscn::PackedScene::2683446640727357175::1714832136::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scenes/enemy_1.gd
-enemy_1_debug.tscn::PackedScene::8396343989244562977::1714832136::0::1::::<><>::res://enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
-level.gd::GDScript::-1::1714832088::0::1::::<>Node2D<>::
-level.tscn::PackedScene::8173735547742905955::1714832135::0::1::::<><>::res://scenes/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://scenes/TileMap2.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn
-obstacle_base.tscn::PackedScene::3064087434393164720::1714832136::0::1::::<><>::res://obstacle_base.gd<>uid://dn17b0a6wwgt7::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png
+enemy_1_debug.gd::GDScript::-1::1715090511::0::1::::<>CharacterBody2D<>::
+level2.gd::GDScript::-1::1714921625::0::1::::<>Node2D<>::
+level.gd::GDScript::-1::1714922426::0::1::::<>Node2D<>::
+obstacle_base.gd::GDScript::-1::1714707141::0::1::::<>Area2D<>::
 obstacle_fire.gd::GDScript::-1::1714709043::0::1::::<>Area2D<>::
-obstacle_fire.tscn::PackedScene::2520695529840859723::1714832136::0::1::::<><>::res://scenes/obstacle_fire.gd<>uid://p5ruypu5p2i0::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png
-player.gd::GDScript::-1::1714830766::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::3738053196799177213::1714832135::0::1::::<><>::res://scenes/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg
+player.gd::GDScript::-1::1714919133::0::1::::<>CharacterBody2D<>::
 projectile.gd::GDScript::-1::1714674264::0::1::::<>Area2D<>::
-projectile.tscn::PackedScene::2843286313954371500::1714832136::0::1::::<><>::res://scenes/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg
 TileMap2.gd::GDScript::-1::1714831689::0::1::::<>TileMap<>::

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bti0gpwlyo1jt"]
 
-[ext_resource type="Script" path="res://scenes/player.gd" id="1_1j4ph"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_1j4ph"]
 [ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
 [ext_resource type="Texture2D" uid="uid://bxj3bxr7n1b2p" path="res://images/weapon1.jpg" id="2_lagyq"]
 
@@ -47,6 +47,7 @@ autostart = true
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+enabled = false
 zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 

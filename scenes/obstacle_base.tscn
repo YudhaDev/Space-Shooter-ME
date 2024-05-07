@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjwjcpwwhwbj1"]
 
-[ext_resource type="Script" path="res://obstacle_base.gd" id="1_t34np"]
+[ext_resource type="Script" path="res://scripts/obstacle_base.gd" id="1_t34np"]
 [ext_resource type="Texture2D" uid="uid://dn17b0a6wwgt7" path="res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png" id="2_k1ijv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fpuhw"]
