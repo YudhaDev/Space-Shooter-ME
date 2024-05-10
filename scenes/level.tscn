@@ -4277,22 +4277,27 @@ visible = false
 toLevel = 1
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+visible = false
 navigation_polygon = SubResource("NavigationPolygon_g7ub7")
-constrain_avoidance = true
 
 [node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+visible = false
 vertices = PackedVector2Array(554, 399, 562, 465, 708, 467, 705, 406)
 
 [node name="NavigationObstacle2D2" type="NavigationObstacle2D" parent="."]
+visible = false
 vertices = PackedVector2Array(325, 159, 385, 256, 329, 286, 321, 355, 510, 361, 509, 243, 449, 223, 441, 191, 443, 172, 505, 176, 495, 130, 325, 128)
 
 [node name="NavigationObstacle2D3" type="NavigationObstacle2D" parent="."]
+visible = false
 vertices = PackedVector2Array(137, 393, 131, 309, 2, 312, 7, 404)
 
 [node name="NavigationObstacle2D4" type="NavigationObstacle2D" parent="."]
+visible = false
 vertices = PackedVector2Array(544, -21, 553, 257, 671, 250, 671, 157, 665, 97, 614, 95, 617, -28)
 
 [node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="."]
+visible = false
 vertices = PackedVector2Array(720, 163, 726, 660, 806, 651, 795, 146)
 
 [connection signal="_player_targeting" from="player" to="." method="_on_player__player_targeting"]

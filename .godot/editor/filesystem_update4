@@ -9,4 +9,4 @@ res://scenes/obstacle_base.tscn
 res://scenes/obstacle_fire.tscn
 res://scenes/ui/buff_selection.tscn
 res://scenes/level2.tscn
-res://scripts/enemy_1_debug.gd
+res://scripts/player.gd

@@ -63,6 +63,9 @@ func shoot():
 	var projectile_obj = _projectile_scene.instantiate()
 	projectile_obj.setup($Node2D/PlayerProjectilesPawnMarker1.global_transform)
 	get_tree().root.add_child(projectile_obj)
+	$shoot_sfx.play()
+	$PointLight2D.visible = true
+	$TimerTembakLight.start()
 
 func _process(delta):
 	if Input.is_action_just_pressed("shoot"):	
@@ -105,3 +108,7 @@ func _on_timer_targeting_timeout():
 func _on_timer_tembak_timeout():
 	if auto_shoot:
 		shoot()
+
+
+func _on_timer_tembak_light_timeout():
+	$PointLight2D.visible = false
