@@ -10,6 +10,7 @@ var _base_health = 50
 var _base_health_multiplier = 1
 var _calculated_health :float = 50
 
+var is_aiming = false
 var auto_shoot = false
 
 func _ready():
@@ -20,6 +21,13 @@ func _ready():
 func _physics_process(delta):
 	#Untuk control
 	var direction = Input.get_vector("left","right","up","down")
+	print(str(direction) + "- direction")
+	if direction != Vector2.ZERO:
+		$AnimationPlayer.play("walk")
+	elif is_aiming:
+		pass
+	else:
+		$AnimationPlayer.play("idle")
 	#print(direction)
 	
 	
