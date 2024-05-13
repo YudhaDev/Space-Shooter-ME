@@ -10,7 +10,6 @@ func _on_timer_timeout():
 	#instansiasi
 	var vacuum_obj = vacuum_pack.instantiate()
 	$"Enemy Vacuums Parent".add_child(vacuum_obj)
-	#print("timer sinyal")
 	
 func _ready():
 	current_enemies = $enemies.get_children()
@@ -21,18 +20,7 @@ func _physics_process(delta):
 		$player.get_child(0).look_at(targeting_obj.global_position)
 	
 func checkingEnemies():
-	
 	pass
-
-#func _on_player_player_projectiles(pos):
-	##print(pos)
-	##print("player menembak")
-	#
-	##spawn projectile
-	#var player_projectile_obj = player_projectiles_pack.instantiate()
-	#$"Timer Projectiles Player".add_child(player_projectile_obj)
-	#player_projectile_obj.position = pos
-
 
 func _on_player__player_targeting(obj):
 	targeting_obj = obj

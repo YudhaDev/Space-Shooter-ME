@@ -1,3 +1,6 @@
+TileMap
+Node2D
+Node
 Timer
 PointLight2D
 AudioStreamPlayer
@@ -8,7 +11,4 @@ NavigationObstacle2D
 NavigationAgent2D
 NavigationRegion2D
 CanvasLayer
-Node2D
 AudioStreamPlayer2D
-Panel
-Label

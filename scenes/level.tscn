@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/dialogueBox.gd" id="6_yd0ma"]
 [ext_resource type="Script" path="res://scripts/TileMap2.gd" id="7_doapv"]
 [ext_resource type="Resource" uid="uid://bdanno4wou6kg" path="res://level1dialogue.tres" id="7_wced4"]
+[ext_resource type="Script" path="res://scripts/level-enemies.gd" id="8_bemtq"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" id="8_pdv0r"]
 [ext_resource type="PackedScene" uid="uid://bjwjcpwwhwbj1" path="res://scenes/obstacle_base.tscn" id="9_gv84e"]
 [ext_resource type="Script" path="res://addons/dialogue_nodes/objects/bbcodeGhost.gd" id="9_qciv6"]
@@ -1941,12 +1942,14 @@ texture = ExtResource("4_pyxac")
 15:9/0 = 0
 15:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 15:9/0/physics_layer_0/angular_velocity = 0.0
+15:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 16:9/0 = 0
 16:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 16:9/0/physics_layer_0/angular_velocity = 0.0
 17:9/0 = 0
 17:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 17:9/0/physics_layer_0/angular_velocity = 0.0
+17:9/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 18:9/0 = 0
 18:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 18:9/0/physics_layer_0/angular_velocity = 0.0
@@ -4102,37 +4105,6 @@ sources/3 = SubResource("TileSetAtlasSource_rhrhq")
 sources/4 = SubResource("TileSetAtlasSource_8ifix")
 sources/5 = SubResource("TileSetAtlasSource_ihceh")
 
-[sub_resource type="GDScript" id="GDScript_jff0a"]
-script/source = "extends Node2D
-
-@export var object_to_go: Node2D
-@export var movement_speed: float = 200.0
-
-var navigation_agent_path_desired_distance = 4
-var navigation_agent_target_desired_distance = 4
-var navigation_agents = []
-
-func _ready():
-	navigation_agents = $\".\".get_children()
-	call_deferred(\"actor_setup\")
-	
-func actor_setup():
-	await get_tree().physics_frame
-	
-	set_movement_target(object_to_go)
-
-func set_movement_target(object_to_go):
-	if navigation_agents.size() > 0:
-		((navigation_agents[0] as CharacterBody2D).get_children()[2] as NavigationAgent2D).target_position = object_to_go.global_position
-
-func _physics_process(delta):
-	if navigation_agents[0].get_child(2).is_navigation_finished():
-		return
-	pass
-	
-	
-"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewham"]
 size = Vector2(112, 1287)
 
@@ -4155,6 +4127,7 @@ source_geometry_group_name = &"navigation_polygon_source_group"
 script = ExtResource("1_c84lo")
 
 [node name="background" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(506, -222)
 scale = Vector2(0.504279, 1.18982)
 texture = ExtResource("1_sjkot")
@@ -4172,7 +4145,7 @@ layer_0/tile_data = PackedInt32Array(589844, 3, 3, 655380, 3, 4, 524309, 65539, 
 script = ExtResource("7_doapv")
 
 [node name="enemies" type="Node2D" parent="." node_paths=PackedStringArray("object_to_go")]
-script = SubResource("GDScript_jff0a")
+script = ExtResource("8_bemtq")
 object_to_go = NodePath("../player")
 
 [node name="enemy2" parent="enemies" node_paths=PackedStringArray("object_to_go") instance=ExtResource("3_wrubf")]

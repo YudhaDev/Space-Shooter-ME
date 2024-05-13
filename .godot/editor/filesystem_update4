@@ -1,5 +1,8 @@
 res://scenes/player.tscn
+res://scripts/debug/GlobalDebugVars.gd
+res://scripts/level.gd
 res://examples/Characters.tres
+res://scripts/enemy_1_debug.gd
 res://scenes/level.tscn
 res://scenes/projectile.tscn
 res://examples/Demo2.tscn
@@ -9,3 +12,5 @@ res://scenes/obstacle_base.tscn
 res://scenes/obstacle_fire.tscn
 res://scenes/ui/buff_selection.tscn
 res://scenes/level2.tscn
+res://scripts/player.gd
+res://scenes/template_level.tscn

@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/Pixel_Time.ogg-d154d1ff17d95f903c6a9b06a7bbfd
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

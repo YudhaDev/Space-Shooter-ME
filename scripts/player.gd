@@ -1,6 +1,15 @@
 extends CharacterBody2D
 
 @export var player_speed:float = 10
+
+var _base_movement_speed = 1
+var _calculated_movement_speed = 0
+var _buff_movement_stack = []
+
+var _base_attack_speed = 1
+var _calculated_attack_speed = 0
+var _buff_attack_stack = []
+
 #signal player_projectiles(pos)
 signal _player_targeting(obj)
 
@@ -21,7 +30,7 @@ func _ready():
 func _physics_process(delta):
 	#Untuk control
 	var direction = Input.get_vector("left","right","up","down")
-	print(str(direction) + "- direction")
+	#print(str(direction) + "- direction")
 	if direction != Vector2.ZERO:
 		$AnimationPlayer.play("walk")
 	elif is_aiming:
@@ -47,6 +56,12 @@ func _physics_process(delta):
 	#var direction = Vector2.RIGHT.rotated(global_rotation)
 	#var projectile = _projectile_scene.instantiate()
 	#projectile.direction = direction
+
+func buffMovement():
+	pass
+
+func buffAttackSpeed():
+	pass
 
 func checkTargeting():
 	var closest_enemy_distance:float = 1000000000.0
