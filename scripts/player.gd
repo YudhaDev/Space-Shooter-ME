@@ -31,6 +31,12 @@ func _physics_process(delta):
 	#Untuk control
 	var direction = Input.get_vector("left","right","up","down")
 	#print(str(direction) + "- direction")
+	var ang = direction.angle()
+	rotation = ang
+	
+	if is_aiming:
+		$AnimationPlayer.play("shoot")
+	
 	if direction != Vector2.ZERO:
 		$AnimationPlayer.play("walk")
 	elif is_aiming:
@@ -67,14 +73,18 @@ func checkTargeting():
 	var closest_enemy_distance:float = 1000000000.0
 	var closest_enemy_obj = null
 	if _detected_enemies.size() != 0:
+		is_aiming = true
 		for i in _detected_enemies.size():
 			#print("object position:"+str(_detected_enemies[i].global_position))
 			var closest_enemy_distance_temp = global_position.distance_to(_detected_enemies[i].global_position)
 			if closest_enemy_distance_temp < closest_enemy_distance:
 				closest_enemy_distance = closest_enemy_distance_temp
 				closest_enemy_obj = _detected_enemies[i]
+	else :
+		is_aiming = false
 	#print("object closes: "+str(closest_enemy_obj))
 	return closest_enemy_obj
+	
 func getHurt(damage_incoming :float):
 	_calculated_health -= damage_incoming
 	print("Nyawa: "+str(_calculated_health))

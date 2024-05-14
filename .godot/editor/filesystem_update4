@@ -1,5 +1,6 @@
 res://scenes/player.tscn
 res://scripts/level.gd
+res://scripts/player.gd
 res://scenes/level.tscn
 res://scenes/projectile.tscn
 res://scenes/enemy_1.tscn
