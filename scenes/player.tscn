@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bti0gpwlyo1jt"]
+[gd_scene load_steps=32 format=3 uid="uid://bti0gpwlyo1jt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1j4ph"]
 [ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
@@ -77,6 +77,54 @@ animations = [{
 "loop": true,
 "name": &"walk",
 "speed": 20.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ujqev"]
+atlas = ExtResource("6_xkugd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0rxf"]
+atlas = ExtResource("6_xkugd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrxou"]
+atlas = ExtResource("6_xkugd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydl2y"]
+atlas = ExtResource("6_xkugd")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nq0w"]
+atlas = ExtResource("6_xkugd")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3imno"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ujqev")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0rxf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrxou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydl2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nq0w")
+}],
+"loop": true,
+"name": &"shooting",
+"speed": 8.0
 }]
 
 [sub_resource type="Animation" id="Animation_cff75"]
@@ -317,6 +365,15 @@ rotation = -1.5708
 scale = Vector2(2.26316, 2.26316)
 texture = ExtResource("3_byhuc")
 hframes = 8
+
+[node name="player_sprite_shooting" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+rotation = -1.5708
+scale = Vector2(2.13816, 2.13816)
+sprite_frames = SubResource("SpriteFrames_3imno")
+animation = &"shooting"
+frame_progress = 0.280653
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
