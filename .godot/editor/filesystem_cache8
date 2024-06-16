@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1718200101
+::res://::1718509293
 icon.svg::CompressedTexture2D::3110761336163890324::1715403865::1715403865::1::::<><>::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1715403865::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 ::res://addons/::1715403862
@@ -1788,6 +1788,15 @@ Tilled_Dirt.png::CompressedTexture2D::7173490887473602166::1715403862::171540386
 Water.png::CompressedTexture2D::3775445889360659788::1715403862::1715403862::1::::<><>::
 Wooden House.png::CompressedTexture2D::1115833176629296173::1715403862::1715403862::1::::<><>::
 ::res://android/::1715403862
+::res://assets/::1718298051
+::res://assets/character/::1718298109
+idle-spritesheet.png::CompressedTexture2D::3998362814224945806::1715402048::1718509294::1::::<><>::
+run-spritesheet.png::CompressedTexture2D::4653957938522484595::1715352270::1718509294::1::::<><>::
+shoot-spritesheet.png::CompressedTexture2D::8158874957236382200::1715611259::1718509294::1::::<><>::
+::res://assets/environment/::1718298100
+tiles-env-ground.png::CompressedTexture2D::6323383524479708894::1718297978::1718509294::1::::<><>::
+tiles-env-nature.png::CompressedTexture2D::3397419875049431996::1718199834::1718509294::1::::<><>::
+tiles-env-water-body.png::CompressedTexture2D::463126972320646926::1718289600::1718509294::1::::<><>::
 ::res://audios/::1715403865
 ::res://audios/bgm/::1715619102
 Pixel_Time.ogg::AudioStreamOggVorbis::4620137298302504884::1715403865::1715619102::1::::<><>::
@@ -1820,7 +1829,7 @@ projectile1.jpg::CompressedTexture2D::2995599569149644960::1715403865::171540386
 shoot-spritesheet.png::CompressedTexture2D::7588052592818692021::1715619313::1715619313::1::::<><>::
 test-spritesheet.png::CompressedTexture2D::3408772075177100356::1715403865::1715403865::1::::<><>::
 weapon1.jpg::CompressedTexture2D::4021046584516808073::1715403865::1715403865::1::::<><>::
-::res://scenes/::1717902381
+::res://scenes/::1718200370
 enemy_1.tscn::PackedScene::2683446640727357175::1715619971::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scripts/enemy_1.gd
 enemy_1_debug.tscn::PackedScene::8396343989244562977::1715619971::0::1::::<><>::res://scripts/enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
 level2.tscn::PackedScene::429972890563365767::1715619971::0::1::::<><>::res://scripts/level2.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://scripts/TileMap2.gd<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn
@@ -1829,16 +1838,16 @@ obstacle_base.tscn::PackedScene::3064087434393164720::1715619971::0::1::::<><>::
 obstacle_fire.tscn::PackedScene::2520695529840859723::1715619971::0::1::::<><>::res://scripts/obstacle_fire.gd<>uid://p5ruypu5p2i0::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png
 player.tscn::PackedScene::3738053196799177213::1717902381::0::1::::<><>::res://scripts/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg<>uid://de6mjoksfatb::::res://images/light.png<>uid://both8ivj4u1w7::::res://images/test-spritesheet.png<>uid://b2m5gwvp10skf::::res://images/idle-spritesheet.png<>uid://da01tpanv8wgo::::res://audios/sfx/072807_heavy-machine-gun-50-caliber-39765.mp3<>uid://dgdyd86ggt6q8::::res://images/shoot-spritesheet.png
 projectile.tscn::PackedScene::2843286313954371500::1715619971::0::1::::<><>::res://scripts/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg
-template_level.tscn::PackedScene::4243456884108897574::1715619971::0::1::::<><>::uid://dg3s6mkblxb5m::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetField.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://cowu300ckjd30::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHole.png<>uid://5mebcr7i4lsd::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png
+template_level.tscn::PackedScene::4243456884108897574::1718200370::0::1::::<><>::uid://dg3s6mkblxb5m::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetField.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://cowu300ckjd30::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHole.png<>uid://5mebcr7i4lsd::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetHouse.png
 ::res://scenes/ui/::1715412030
 buff_selection.gd::GDScript::-1::1715403865::0::1::::<>Control<>::
 buff_selection.tscn::PackedScene::359671253519145880::1715412030::0::1::::<><>::res://scenes/ui/buff_selection.gd
-::res://scripts/::1717902381
+::res://scripts/::1718200370
 enemy_1.gd::GDScript::-1::1715403865::0::1::::<>CharacterBody2D<>::
 enemy_1_debug.gd::GDScript::-1::1715619102::0::1::::<>CharacterBody2D<>::
 level2.gd::GDScript::-1::1715403865::0::1::::<>Node2D<>::
 level-enemies.gd::GDScript::-1::1715619102::0::1::::<>Node2D<>::
-level.gd::GDScript::-1::1717902381::0::1::::<>Node2D<>::
+level.gd::GDScript::-1::1718200370::0::1::::<>Node2D<>::
 obstacle_base.gd::GDScript::-1::1715403865::0::1::::<>Area2D<>::
 obstacle_fire.gd::GDScript::-1::1715403865::0::1::::<>Area2D<>::
 player.gd::GDScript::-1::1717902381::0::1::::<>CharacterBody2D<>::
