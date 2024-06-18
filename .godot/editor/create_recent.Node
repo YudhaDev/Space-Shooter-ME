@@ -1,3 +1,7 @@
+Label
+Panel
+PanelContainer
+Control
 TileMap
 Node2D
 Node
@@ -8,7 +12,3 @@ Sprite2D
 AnimationPlayer
 AnimatedSprite2D
 NavigationObstacle2D
-NavigationAgent2D
-NavigationRegion2D
-CanvasLayer
-AudioStreamPlayer2D

@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var debug_vars = get_node("/root/DebugVars")
+@onready var currency = get_node("/root/GlobalCurrencies")
 
 var base_speed:float = 1
 var max_speed:float = 200
@@ -76,6 +77,7 @@ func getHit(damage:float, projectile_penetration:int):
 	health_calculated -= damage
 	#print(health_calculated)
 	if health_calculated <= 0:
+		currency.buff_currency += randi_range(1,2)
 		destroy()
 	
 	return projectile_penetration - base_penetration_negate
