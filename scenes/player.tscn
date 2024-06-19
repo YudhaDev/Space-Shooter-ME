@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://bti0gpwlyo1jt"]
+[gd_scene load_steps=34 format=3 uid="uid://bti0gpwlyo1jt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1j4ph"]
 [ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://b2m5gwvp10skf" path="res://images/idle-spritesheet.png" id="5_4a4gm"]
 [ext_resource type="AudioStream" uid="uid://da01tpanv8wgo" path="res://audios/sfx/072807_heavy-machine-gun-50-caliber-39765.mp3" id="5_g2t40"]
 [ext_resource type="Texture2D" uid="uid://dgdyd86ggt6q8" path="res://images/shoot-spritesheet.png" id="6_xkugd"]
+[ext_resource type="PackedScene" uid="uid://ce5k06imh1egd" path="res://scenes/ui/button_open_select_buff.tscn" id="9_hsfnr"]
+[ext_resource type="Script" path="res://scripts/player_ui_handling.gd" id="9_nhg1n"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c5hmr"]
 atlas = ExtResource("3_byhuc")
@@ -413,6 +415,12 @@ position_smoothing_enabled = true
 
 [node name="shoot_sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_g2t40")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("9_nhg1n")
+
+[node name="ButtonSelectBuff" parent="CanvasLayer" instance=ExtResource("9_hsfnr")]
+visible = false
 
 [connection signal="body_entered" from="DetectingEnemy" to="." method="_on_detecting_enemy_body_entered"]
 [connection signal="body_exited" from="DetectingEnemy" to="." method="_on_detecting_enemy_body_exited"]

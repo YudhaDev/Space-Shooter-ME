@@ -1,11 +1,14 @@
-res://scripts/level.gd
-res://scripts/global/GlobalCurrencies.gd
 res://scenes/ui/display currencies.tscn
+res://scripts/level.gd
 res://scenes/template_level.tscn
 res://scenes/level.tscn
 res://scenes/player.tscn
 res://scenes/ui/buff_selection.tscn
-res://scripts/enemy_1.gd
-res://scenes/ui/script_display_currency.gd
 res://scenes/enemy_1_debug.tscn
-res://scripts/enemy_1_debug.gd
+res://scripts/global/GlobalEnvironment.gd
+res://scripts/bonfire.gd
+res://scenes/ui/script_button_open_select_buff.gd
+res://scenes/ui/button_open_select_buff.tscn
+res://scenes/bonfire.tscn
+res://scripts/player_ui_handling.gd
+res://scenes/ui/script_buff_selection.gd

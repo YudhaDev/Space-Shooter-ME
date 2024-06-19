@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://dopoh3gw6objn"]
+[gd_scene load_steps=32 format=3 uid="uid://dopoh3gw6objn"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_c84lo"]
 [ext_resource type="Texture2D" uid="uid://radxyc7tlbu4" path="res://images/bg.jpg" id="1_sjkot"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://b63a8sfihr4pk" path="res://audios/bgm/Pixel_Time.ogg" id="16_y6jmf"]
 [ext_resource type="PackedScene" uid="uid://fehy6lyb43k3" path="res://scenes/ui/buff_selection.tscn" id="17_he6ia"]
 [ext_resource type="PackedScene" uid="uid://dn563ug5iim3h" path="res://scenes/ui/display currencies.tscn" id="19_8mawa"]
+[ext_resource type="PackedScene" uid="uid://dc1u2q8x4yr1x" path="res://scenes/bonfire.tscn" id="20_h4o6u"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_prpya"]
 
@@ -4251,7 +4252,6 @@ visible = false
 toLevel = 1
 
 [node name="DisplayCurrencies" parent="UI" instance=ExtResource("19_8mawa")]
-anchors_preset = 1
 offset_left = 0.0
 
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
@@ -4277,6 +4277,9 @@ vertices = PackedVector2Array(544, -21, 553, 257, 671, 250, 671, 157, 665, 97, 6
 [node name="NavigationObstacle2D5" type="NavigationObstacle2D" parent="."]
 visible = false
 vertices = PackedVector2Array(720, 163, 726, 660, 806, 651, 795, 146)
+
+[node name="Bonfire" parent="." instance=ExtResource("20_h4o6u")]
+position = Vector2(142, 93)
 
 [connection signal="_player_targeting" from="player" to="." method="_on_player__player_targeting"]
 [connection signal="timeout" from="Timer Check Enemy" to="." method="_on_timer_check_enemy_timeout"]

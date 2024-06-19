@@ -23,3 +23,7 @@ func _on_button_pressed():
 			pass
 	print("button 1 pressed")
 	pass # Replace with function body.
+
+
+func _on_close_button_pressed():
+	queue_free()

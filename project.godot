@@ -20,13 +20,13 @@ config/icon="res://icon.svg"
 DebugVars="*res://scripts/debug/GlobalDebugVars.gd"
 BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 GlobalCurrencies="*res://scripts/global/GlobalCurrencies.gd"
+GlobalEnvironment="*res://scripts/global/GlobalEnvironment.gd"
 
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=854
 window/stretch/mode="viewport"
-window/stretch/scale=0.68
 window/handheld/orientation=1
 
 [editor_plugins]

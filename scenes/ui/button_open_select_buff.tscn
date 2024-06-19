@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://ce5k06imh1egd"]
+
+[ext_resource type="Script" path="res://scenes/ui/script_button_open_select_buff.gd" id="1_o58wp"]
+
+[node name="ButtonSelectBuff" type="Control"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_o58wp")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -160.61
+offset_right = 40.0
+offset_bottom = -80.61
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="CenterContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 46
+text = "O"
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_button_pressed"]

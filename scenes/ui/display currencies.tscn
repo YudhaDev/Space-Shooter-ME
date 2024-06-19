@@ -4,6 +4,7 @@
 
 [node name="DisplayCurrencies" type="Control"]
 layout_mode = 3
+anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -480.0
@@ -15,22 +16,22 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -239.0
-offset_top = 93.0
-offset_right = 61.0
-offset_bottom = 206.0
+offset_left = -154.0
+offset_top = 74.0
+offset_right = 6.0
+offset_bottom = 143.0
 grow_horizontal = 0
-scale = Vector2(0.809976, 0.682)
+scale = Vector2(1, 0.842)
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 0
-offset_left = 47.4221
-offset_top = 6.08847
-offset_right = 247.422
-offset_bottom = 106.088
-theme_override_font_sizes/font_size = 50
+offset_left = 4.0
+offset_top = 7.0
+offset_right = 146.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 20
 text = "NUM CURREN"
-horizontal_alignment = 1
+horizontal_alignment = 2
 vertical_alignment = 1
 autowrap_mode = 1
 clip_text = true
