@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://bti0gpwlyo1jt"]
+[gd_scene load_steps=36 format=3 uid="uid://bti0gpwlyo1jt"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_1j4ph"]
 [ext_resource type="Texture2D" uid="uid://d4mmoouo35s86" path="res://images/Alice_Icon_resave.png" id="1_7k0sv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://b2m5gwvp10skf" path="res://images/idle-spritesheet.png" id="5_4a4gm"]
 [ext_resource type="AudioStream" uid="uid://da01tpanv8wgo" path="res://audios/sfx/072807_heavy-machine-gun-50-caliber-39765.mp3" id="5_g2t40"]
 [ext_resource type="Texture2D" uid="uid://dgdyd86ggt6q8" path="res://images/shoot-spritesheet.png" id="6_xkugd"]
+[ext_resource type="Texture2D" uid="uid://crx4kq54xddky" path="res://assets/character/died-spritesheet.png" id="7_ojw3o"]
 [ext_resource type="PackedScene" uid="uid://ce5k06imh1egd" path="res://scenes/ui/button_open_select_buff.tscn" id="9_hsfnr"]
 [ext_resource type="Script" path="res://scripts/player_ui_handling.gd" id="9_nhg1n"]
 
@@ -320,9 +321,50 @@ tracks/2/keys = {
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
 }
 
+[sub_resource type="Animation" id="Animation_c04ap"]
+resource_name = "died"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player_sprite:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ojw3o")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player_sprite:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [15]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player_sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_i1weo"]
 _data = {
 "RESET": SubResource("Animation_cff75"),
+"died": SubResource("Animation_c04ap"),
 "idle": SubResource("Animation_pbonw"),
 "idle2": SubResource("Animation_vfewi"),
 "shoot": SubResource("Animation_ykqsc"),
@@ -366,7 +408,7 @@ unique_name_in_owner = true
 rotation = -1.5708
 scale = Vector2(2.26316, 2.26316)
 texture = ExtResource("3_byhuc")
-hframes = 8
+hframes = 15
 
 [node name="player_sprite_shooting" type="AnimatedSprite2D" parent="."]
 unique_name_in_owner = true
