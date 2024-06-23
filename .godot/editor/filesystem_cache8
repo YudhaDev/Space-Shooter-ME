@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1718998645
+::res://::1719135763
 export_presets.cfg::TextFile::-1::1714236777::0::1::::<><>::
 icon.svg::CompressedTexture2D::3110761336163890324::1714036905::1714037532::1::::<><>::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1714201126::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
@@ -1864,6 +1864,6 @@ projectile.gd::GDScript::-1::1714674264::0::1::::<>Area2D<>::
 TileMap2.gd::GDScript::-1::1714831689::0::1::::<>TileMap<>::
 ::res://scripts/debug/::1715593348
 GlobalDebugVars.gd::GDScript::-1::1715593348::0::1::::<>Node2D<>::
-::res://scripts/global/::1718798343
+::res://scripts/global/::1719005719
 GlobalCurrencies.gd::GDScript::-1::1718709518::0::1::::<>Node<>::
-GlobalEnvironment.gd::GDScript::-1::1718798343::0::1::::<>Node<>::
+GlobalEnvironment.gd::GDScript::-1::1719005719::0::1::::<>Node<>::
