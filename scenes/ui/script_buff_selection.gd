@@ -28,8 +28,12 @@ func _on_button_pressed():
 func _on_close_button_pressed():
 	queue_free()
 
+func generateBuffOption():
+	
+	pass
 
 func _on_button_4_pressed():
-	var tampung = global_environment.maxedBuffExclusion()
-	print(str(tampung))
+	#var tampung = global_environment.maxedBuffExclusion()
+	#print(str(tampung))
+	print("oyyy: "+str(global_environment.pickBuff()))
 	pass # Replace with function body.
