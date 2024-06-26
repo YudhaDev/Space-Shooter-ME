@@ -1,6 +1,6 @@
 extends Control
 @export var toLevel = 0
-
+@onready var global_environment = get_node("/root/GlobalEnvironment")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -27,3 +27,9 @@ func _on_button_pressed():
 
 func _on_close_button_pressed():
 	queue_free()
+
+
+func _on_button_4_pressed():
+	var tampung = global_environment.maxedBuffExclusion()
+	print(str(tampung))
+	pass # Replace with function body.
