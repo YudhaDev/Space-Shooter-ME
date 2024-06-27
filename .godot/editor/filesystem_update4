@@ -1,5 +1,7 @@
-res://scenes/ui/script_buff_selection.gd
 res://scenes/ui/buff_selection.tscn
 res://scripts/level.gd
-res://scripts/global/GlobalEnvironment.gd
+res://scenes/ui/script_buff_selection.gd
 res://scenes/level.tscn
+res://scenes/ui/pause_menu.tscn
+res://scenes/ui/main_menu.tscn
+res://scenes/ui/script_mainmenu.gd

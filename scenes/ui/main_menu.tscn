@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmufxfs3lidl4"]
+
+[ext_resource type="Script" path="res://scenes/ui/script_mainmenu.gd" id="1_8u70x"]
+[ext_resource type="Texture2D" uid="uid://qpo08ce2cos0" path="res://images/art-8396377_1280.png" id="1_pwvds"]
+
+[node name="mainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8u70x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -104.0
+offset_right = 744.0
+offset_bottom = 322.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("1_pwvds")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -176.0
+offset_top = -110.425
+offset_right = 176.0
+offset_bottom = -79.425
+grow_horizontal = 2
+grow_vertical = 0
+text = "PLAY"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
