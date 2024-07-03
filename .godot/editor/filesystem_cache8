@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1718978504
+::res://::1720016098
 icon.svg::CompressedTexture2D::3110761336163890324::1715403865::1715403865::1::::<><>::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1715403865::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 ::res://addons/::1715403862
@@ -1788,16 +1788,27 @@ Tilled_Dirt.png::CompressedTexture2D::7173490887473602166::1715403862::171540386
 Water.png::CompressedTexture2D::3775445889360659788::1715403862::1715403862::1::::<><>::
 Wooden House.png::CompressedTexture2D::1115833176629296173::1715403862::1715403862::1::::<><>::
 ::res://android/::1715403862
-::res://assets/::1718298051
-::res://assets/character/::1718978495
+::res://assets/::1719654771
+::res://assets/character/::1719505108
 died-spritesheet.png::CompressedTexture2D::6015311936371623456::1718953258::1718978505::1::::<><>::
 idle-spritesheet.png::CompressedTexture2D::3998362814224945806::1715402048::1718509294::1::::<><>::
 run-spritesheet.png::CompressedTexture2D::4653957938522484595::1715352270::1718509294::1::::<><>::
 shoot-spritesheet.png::CompressedTexture2D::8158874957236382200::1715611259::1718509294::1::::<><>::
-::res://assets/environment/::1718509294
+::res://assets/enemy/::1719984121
+enemy-drone-died.png::CompressedTexture2D::6742519502730284086::1719480069::1719984121::1::::<><>::
+enemy-drone-idle.png::CompressedTexture2D::7568441226610686283::1719288494::1719984121::1::::<><>::
+enemy-drone-shoot.png::CompressedTexture2D::377909644617958659::1719374010::1719984121::1::::<><>::
+::res://assets/environment/::1719984121
+tiles-env-ground-hazard.png::CompressedTexture2D::6530995864581516595::1719594216::1719984121::1::::<><>::
 tiles-env-ground.png::CompressedTexture2D::6323383524479708894::1718297978::1718509294::1::::<><>::
 tiles-env-nature.png::CompressedTexture2D::3397419875049431996::1718199834::1718509294::1::::<><>::
 tiles-env-water-body.png::CompressedTexture2D::463126972320646926::1718289600::1718509294::1::::<><>::
+::res://assets/misc/::1720016098
+amenities-billboard.png::CompressedTexture2D::4581993699577002380::1719930000::1720016088::1::::<><>::
+amenities-bonfire.png::CompressedTexture2D::7936438760904088854::1719930020::1720016094::1::::<><>::
+amenities-vending-machine.png::CompressedTexture2D::995809675272247952::1719929981::1720016098::1::::<><>::
+buff-icons-sprites.png::CompressedTexture2D::5610246626700656263::1719846357::1719984121::1::::<><>::
+bullets.png::CompressedTexture2D::383588284417784717::1719654631::1719984121::1::::<><>::
 ::res://audios/::1715403865
 ::res://audios/bgm/::1715619102
 Pixel_Time.ogg::AudioStreamOggVorbis::4620137298302504884::1715403865::1715619102::1::::<><>::
