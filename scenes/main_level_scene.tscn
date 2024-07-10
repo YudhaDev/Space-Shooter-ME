@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c23ficywdbky7"]
+
+[ext_resource type="Script" path="res://scripts/script_main_level_scene.gd" id="1_s68e7"]
+
+[node name="MainLevelScene" type="Node2D"]
+script = ExtResource("1_s68e7")
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="HUD" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="Main2D" type="Node2D" parent="."]

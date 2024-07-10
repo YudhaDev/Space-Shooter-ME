@@ -1,7 +1,10 @@
-res://scenes/ui/buff_selection.tscn
+res://scenes/ui/dialog.tscn
 res://scripts/level.gd
-res://scenes/ui/script_buff_selection.gd
+res://theme/0-opacity-panel.tres
 res://scenes/level.tscn
+res://scenes/ui/buff_selection.tscn
 res://scenes/ui/pause_menu.tscn
 res://scenes/ui/main_menu.tscn
-res://scenes/ui/script_mainmenu.gd
+res://scenes/main_level_scene.tscn
+res://scenes/template_level.tscn
+res://scenes/neolevel1.tscn

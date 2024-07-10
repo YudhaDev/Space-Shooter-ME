@@ -1,11 +1,13 @@
+/home/xndrive-ubuntu
+/home/xndrive-ubuntu/android-sdk/latest
+/home/xndrive-ubuntu/zulu-17-amd64
+/home/xndrive-ubuntu/android-sdk
+res://theme
 res://scenes/ui
 res://scripts/global
 res://images
 res://scenes
 res://scripts/debug
 res://scripts
-H:/godot-projects/Space Shooter ME
-F:/java-17-win11/bin
-F:/Android-sdk-win11
 res://
 res://examples

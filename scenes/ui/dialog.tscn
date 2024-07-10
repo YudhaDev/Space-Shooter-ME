@@ -1,0 +1,90 @@
+[gd_scene load_steps=5 format=3 uid="uid://ct3yvmob8ot7r"]
+
+[ext_resource type="Script" path="res://scenes/ui/script_dialogue_scene.gd" id="1_2o8w4"]
+[ext_resource type="Texture2D" uid="uid://7njfw8uw1dkw" path="res://images/Shiroko_Portrait.webp" id="1_4t6od"]
+[ext_resource type="Theme" uid="uid://c5y7up2ccmwvp" path="res://theme/0-opacity-panel.tres" id="2_7bj63"]
+[ext_resource type="Script" path="res://scenes/ui/Script_PanelInputHandling.gd" id="4_3ep18"]
+
+[node name="dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2o8w4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -857.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(112, 510)
+scale = Vector2(0.334, 0.316513)
+texture = ExtResource("1_4t6od")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 152.0
+offset_right = 942.0
+offset_bottom = 2176.0
+scale = Vector2(0.345, 0.345)
+texture = ExtResource("1_4t6od")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7bj63")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 267.0
+offset_top = 340.0
+offset_right = 455.0
+offset_bottom = 629.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel"]
+layout_mode = 2
+offset_right = 188.0
+grow_horizontal = 2
+fit_content = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 280.0
+offset_top = 329.0
+offset_right = 379.0
+offset_bottom = 353.0
+
+[node name="PanelInputHandling" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7bj63")
+script = ExtResource("4_3ep18")
+
+[node name="Timerdisplaytext" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timerdisplaytext" to="." method="_on_timerdisplaytext_timeout"]
