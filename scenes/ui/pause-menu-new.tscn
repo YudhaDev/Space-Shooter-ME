@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://bvvkcrl5i3g2m"]
+
+[ext_resource type="Theme" uid="uid://ddjriciy5qgr1" path="res://theme/ui-circular-button1.tres" id="1_w7uam"]
+[ext_resource type="Theme" uid="uid://b713hevup8vg6" path="res://theme/dialog-panel-name.tres" id="2_gjoye"]
+[ext_resource type="Theme" uid="uid://cs3ghhbnf5jh1" path="res://theme/dialog-panel-text.tres" id="3_1e647"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlpns"]
+bg_color = Color(0.924436, 0.744576, 0.108428, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 88.0
+offset_bottom = 88.0
+theme = ExtResource("1_w7uam")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 5.0
+offset_right = 172.0
+offset_bottom = 46.0
+theme = ExtResource("2_gjoye")
+
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme = ExtResource("1_w7uam")
+theme_override_styles/panel = SubResource("StyleBoxFlat_jlpns")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme = ExtResource("3_1e647")
+
+[node name="Panel2" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+theme = ExtResource("3_1e647")

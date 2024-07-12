@@ -32,7 +32,7 @@ func anim_text():
 
 func _on_timerdisplaytext_timeout():
 	if arrTextToDisplay.size() != 0:
-		$Panel/RichTextLabel.append_text(str(arrTextToDisplay.front()))
+		$Panel/dialog_text.append_text(str(arrTextToDisplay.front()))
 		arrTextToDisplay.remove_at(0)
 	else:
 		$Timerdisplaytext.stop()
