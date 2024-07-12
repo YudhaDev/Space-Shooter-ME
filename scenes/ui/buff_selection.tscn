@@ -57,16 +57,23 @@ grow_vertical = 2
 alignment = 1
 
 [node name="Button" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Buff 1"
 
 [node name="Button2" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Buff 2"
 
 [node name="Button3" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Buff 3"
+
+[node name="Button4" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Debug Test"
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 1
@@ -84,4 +91,5 @@ grow_vertical = 0
 text = "Close"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button4" to="." method="_on_button_4_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_close_button_pressed"]

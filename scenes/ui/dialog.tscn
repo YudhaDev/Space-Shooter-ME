@@ -1,0 +1,110 @@
+[gd_scene load_steps=8 format=3 uid="uid://ct3yvmob8ot7r"]
+
+[ext_resource type="Script" path="res://scenes/ui/script_dialogue_scene.gd" id="1_2o8w4"]
+[ext_resource type="Texture2D" uid="uid://7njfw8uw1dkw" path="res://images/Shiroko_Portrait.webp" id="1_4t6od"]
+[ext_resource type="Theme" uid="uid://c5y7up2ccmwvp" path="res://theme/0-opacity-panel.tres" id="2_7bj63"]
+[ext_resource type="Theme" uid="uid://cs3ghhbnf5jh1" path="res://theme/dialog-panel-text.tres" id="4_0phmx"]
+[ext_resource type="Script" path="res://scenes/ui/Script_PanelInputHandling.gd" id="4_3ep18"]
+[ext_resource type="Theme" uid="uid://b713hevup8vg6" path="res://theme/dialog-panel-name.tres" id="5_rd4rg"]
+[ext_resource type="Theme" uid="uid://8y47ra3tp5sl" path="res://theme/ui-text-dialog.tres" id="5_u3rkc"]
+
+[node name="dialog" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2o8w4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -857.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+visible = false
+position = Vector2(112, 510)
+scale = Vector2(0.334, 0.316513)
+texture = ExtResource("1_4t6od")
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 152.0
+offset_right = 942.0
+offset_bottom = 2176.0
+scale = Vector2(0.345, 0.345)
+texture = ExtResource("1_4t6od")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7bj63")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 267.0
+offset_top = 340.0
+offset_right = 455.0
+offset_bottom = 629.0
+theme = ExtResource("4_0phmx")
+
+[node name="dialog_text" type="RichTextLabel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 10.0
+offset_top = 24.0
+offset_right = -10.0
+offset_bottom = 82.0
+grow_horizontal = 2
+theme = ExtResource("5_u3rkc")
+fit_content = true
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 274.0
+offset_top = 329.0
+offset_right = 410.0
+offset_bottom = 353.0
+theme = ExtResource("5_rd4rg")
+
+[node name="Name" type="Label" parent="Panel2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = -5.0
+offset_right = 144.0
+offset_bottom = 29.0
+text = "SHIROKO"
+vertical_alignment = 1
+
+[node name="PanelInputHandling" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_7bj63")
+script = ExtResource("4_3ep18")
+
+[node name="Timerdisplaytext" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="timeout" from="Timerdisplaytext" to="." method="_on_timerdisplaytext_timeout"]

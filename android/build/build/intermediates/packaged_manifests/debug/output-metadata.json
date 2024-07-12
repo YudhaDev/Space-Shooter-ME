@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.spaceshooterme",
+  "applicationId": "com.example.waifushuter",
   "variantName": "debug",
   "elements": [
     {
@@ -12,7 +12,7 @@
       "filters": [],
       "attributes": [],
       "versionCode": 1,
-      "versionName": "com.xn.arisumaid",
+      "versionName": "waifushuter",
       "outputFile": "AndroidManifest.xml"
     }
   ],
