@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-res://scenes/template_level.tscn
-res://scripts/level.gd
-=======
-res://theme/ui-text-dialog-name.tres
 res://scenes/ui/dialog.tscn
 res://scripts/level.gd
 res://theme/0-opacity-panel.tres
 res://theme/dialog-panel-text.tres
 res://theme/dialog-panel-name.tres
-res://theme/ui-circular-button1.tres
-res://scenes/level.tscn
-res://scenes/ui/buff_selection.tscn
-res://scenes/ui/pause_menu.tscn
-res://scenes/ui/main_menu.tscn
-res://scenes/main_level_scene.tscn
-res://scenes/template_level.tscn
-res://scenes/neolevel1.tscn
-res://scenes/ui/pause-menu-new.tscn
 res://theme/ui-text-dialog.tres
->>>>>>> origin/yudha-branch
