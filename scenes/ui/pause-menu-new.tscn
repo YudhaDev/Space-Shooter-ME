@@ -1,8 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://bvvkcrl5i3g2m"]
+[gd_scene load_steps=7 format=3 uid="uid://bvvkcrl5i3g2m"]
 
 [ext_resource type="Theme" uid="uid://ddjriciy5qgr1" path="res://theme/ui-circular-button1.tres" id="1_w7uam"]
 [ext_resource type="Theme" uid="uid://b713hevup8vg6" path="res://theme/dialog-panel-name.tres" id="2_gjoye"]
+[ext_resource type="Theme" uid="uid://8y47ra3tp5sl" path="res://theme/ui-text-dialog.tres" id="2_uw0hb"]
 [ext_resource type="Theme" uid="uid://cs3ghhbnf5jh1" path="res://theme/dialog-panel-text.tres" id="3_1e647"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14r6o"]
+bg_color = Color(0.996078, 0.964706, 0.952941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jlpns"]
 bg_color = Color(0.924436, 0.744576, 0.108428, 1)
@@ -19,6 +23,63 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Panel2"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -45.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_1e647")
+theme_override_styles/panel = SubResource("StyleBoxFlat_14r6o")
+
+[node name="Label" type="Label" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_uw0hb")
+theme_override_font_sizes/font_size = 60
+text = "PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Panel2/Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Panel" type="Panel" parent="Panel2/Panel/Control"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 17.0
+offset_right = 248.0
+offset_bottom = 70.0
+theme = ExtResource("3_1e647")
+
+[node name="Panel2" type="Panel" parent="Panel2/Panel/Control"]
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 53.0
+theme = ExtResource("2_gjoye")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -53,8 +114,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 40.0
+offset_left = -80.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 144.0
 grow_horizontal = 0
 
 [node name="Panel" type="Panel" parent="VBoxContainer"]

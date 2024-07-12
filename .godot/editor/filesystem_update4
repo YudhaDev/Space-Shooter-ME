@@ -1,6 +1,9 @@
-res://scenes/ui/dialog.tscn
+res://scenes/ui/pause-menu-new.tscn
 res://scripts/level.gd
 res://theme/0-opacity-panel.tres
 res://theme/dialog-panel-text.tres
 res://theme/dialog-panel-name.tres
 res://theme/ui-text-dialog.tres
+res://theme/ui-circular-button1.tres
+res://theme/ui-dialog-pause-bg.tres
+res://scenes/ui/dialog.tscn

@@ -1,0 +1,8 @@
+Dialog name: Quicksand Bold
+Coins: Quicksand Bold
+Dialog content: Comic Neue Bold
+Pause Headline: Roboto Bold Italic
+Button text: Roboto Medium
+Bonfire: Instrumental Serif Normal
+Vending machine price tag: Roboto Mono Normal
+Vending machine popup alert: Poppins

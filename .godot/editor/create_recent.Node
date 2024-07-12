@@ -1,7 +1,7 @@
-Control
-Panel
-VBoxContainer
 Label
+Panel
+Control
+VBoxContainer
 TextEdit
 TextureRect
 Timer
