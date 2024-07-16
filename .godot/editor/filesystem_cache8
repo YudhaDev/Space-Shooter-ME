@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1721126393
+::res://::1721145447
 export_presets.cfg::TextFile::-1::1720793770::0::1::::<><>::
 hs_err_pid7916.log::TextFile::-1::1720633588::0::1::::<><>::
 hs_err_pid13000.log::TextFile::-1::1720633588::0::1::::<><>::
@@ -7,7 +7,7 @@ icon.svg::CompressedTexture2D::3110761336163890324::1714036905::1714037532::1:::
 level1dialogue.tres::Resource/Resource::2597800531979266262::1714201126::0::1::::<><>::res://addons/dialogue_nodes/objects/DialogueData.gd
 replay_pid7916.log::TextFile::-1::1720633588::0::1::::<><>::
 replay_pid13000.log::TextFile::-1::1720633588::0::1::::<><>::
-script_vending_machine.gd::GDScript::-1::1721057410::0::1::::<>Node2D<>::
+script_vending_machine.gd::GDScript::-1::1721141044::0::1::::<>Node2D<>::
 ::res://addons/::1714827924
 ::res://addons/better-terrain/::1714227895
 BetterTerrain.gd::GDScript::-1::1714227892::0::1::::<>Node<>::
@@ -1793,8 +1793,6 @@ Hills.png::CompressedTexture2D::7420510163325450946::1714228355::1714827926::1::
 Tilled_Dirt.png::CompressedTexture2D::7173490887473602166::1714228355::1714827926::1::::<><>::
 Water.png::CompressedTexture2D::3775445889360659788::1714228355::1714827926::1::::<><>::
 Wooden House.png::CompressedTexture2D::1115833176629296173::1714228355::1714827926::1::::<><>::
-::res://android/::1721115824
-::res://android.aaa/::1721114396
 ::res://assets/::1720797037
 ::res://assets/character/::1720797037
 died-spritesheet.png::CompressedTexture2D::6015311936371623456::1720797037::1720797037::1::::<><>::
@@ -1811,7 +1809,7 @@ tiles-env-ground-hazard.png::CompressedTexture2D::6530995864581516595::172079703
 tiles-env-ground.png::CompressedTexture2D::6323383524479708894::1718709286::1718709286::1::::<><>::
 tiles-env-nature.png::CompressedTexture2D::3397419875049431996::1718709286::1718709286::1::::<><>::
 tiles-env-water-body.png::CompressedTexture2D::463126972320646926::1718709286::1718709286::1::::<><>::
-::res://assets/misc/::1721139042
+::res://assets/misc/::1721139048
 amenities-billboard.png::CompressedTexture2D::4581993699577002380::1720797037::1720797037::1::::<><>::
 amenities-bonfire.png::CompressedTexture2D::7936438760904088854::1720797037::1720797037::1::::<><>::
 amenities-vending-machine.png::CompressedTexture2D::995809675272247952::1720797037::1720797037::1::::<><>::
@@ -1938,41 +1936,47 @@ Shiroko_Portrait.webp::CompressedTexture2D::2273436496555618534::1720633588::172
 shoot-spritesheet.png::CompressedTexture2D::7588052592818692021::1715700788::1715700788::1::::<><>::
 test-spritesheet.png::CompressedTexture2D::3408772075177100356::1715352527::1715352600::1::::<><>::
 weapon1.jpg::CompressedTexture2D::4021046584516808073::1714668604::1714668609::1::::<><>::
-::res://scenes/::1721139008
+::res://localization/::1721144542
+mainmenu_en.mo::Translation::-1::1721144542::0::1::::<><>::
+mainmenu_en.po::Translation::-1::1721144541::0::1::::<><>::
+mainmenu_id.mo::Translation::-1::1721143865::0::1::::<><>::
+mainmenu_id.po::Translation::-1::1721143865::0::1::::<><>::
+::res://localization/POT/::1721142889
+::res://scenes/::1721143186
 bonfire.tscn::PackedScene::7354577008688563967::1718802503::0::1::::<><>::res://scripts/bonfire.gd<>uid://sn12dasc8w4d::::res://images/Bonfire_1.png
 enemy_1.tscn::PackedScene::2683446640727357175::1715756747::0::1::::<><>::uid://bwak6j32145i6::::res://images/kswx2oD.png<>res://scripts/enemy_1.gd
 enemy_1_debug.tscn::PackedScene::8396343989244562977::1718796431::0::1::::<><>::res://scripts/enemy_1_debug.gd<>uid://bwak6j32145i6::::res://images/kswx2oD.png
 level2.tscn::PackedScene::429972890563365767::1715756748::0::1::::<><>::res://scripts/level2.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://scripts/TileMap2.gd<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn
-level.tscn::PackedScene::8173735547742905955::1721139008::0::1::::<><>::res://scripts/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://scripts/TileMap2.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://scripts/level-enemies.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn<>uid://dn563ug5iim3h::::res://scenes/ui/display currencies.tscn<>uid://dc1u2q8x4yr1x::::res://scenes/bonfire.tscn
-main_level_scene.tscn::PackedScene::6726060737167468016::1721139008::0::1::::<><>::res://scripts/script_main_level_scene.gd<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://bmv1biglncgcx::::res://scenes/ui/hud.tscn<>res://scenes/test_script.gd<>uid://ct3yvmob8ot7r::::res://scenes/ui/dialog.tscn<>uid://bvvkcrl5i3g2m::::res://scenes/ui/pause-menu-new.tscn<>uid://vnhjp6hkeegc::::res://scenes/ui/vending-buff.tscn
-neolevel1.tscn::PackedScene::8860483883714333622::1721139007::0::1::::<><>::uid://cwddg5op7varu::::res://assets/environment/tiles-env-ground.png<>res://scenes/script_neolevel_1.gd<>uid://bon0akmwxl7bs::::res://assets/environment/tiles-env-nature.png<>uid://dc1u2q8x4yr1x::::res://scenes/bonfire.tscn<>uid://caxj5yptwwggt::::res://scenes/vending_machine.tscn
+level.tscn::PackedScene::8173735547742905955::1721143185::0::1::::<><>::res://scripts/level.gd<>uid://radxyc7tlbu4::::res://images/bg.jpg<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://cclmhw4shndbe::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetFloor.png<>uid://drvis87mbeq22::::res://scenes/enemy_1_debug.tscn<>uid://ddw41knp1jhdo::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetNature.png<>uid://vmncq2eodng6::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png<>uid://dke53824ft4l5::::res://addons/Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetVillageAbandoned.png<>res://addons/dialogue_nodes/objects/dialogueBox.gd<>res://scripts/TileMap2.gd<>uid://bdanno4wou6kg::::res://level1dialogue.tres<>res://scripts/level-enemies.gd<>res://addons/dialogue_nodes/objects/bbcodeWait.gd<>uid://bjwjcpwwhwbj1::::res://scenes/obstacle_base.tscn<>res://addons/dialogue_nodes/objects/bbcodeGhost.gd<>uid://bb6bqtc56wljn::::res://scenes/obstacle_fire.tscn<>uid://b63a8sfihr4pk::::res://audios/bgm/Pixel_Time.ogg<>uid://fehy6lyb43k3::::res://scenes/ui/buff_selection.tscn<>uid://dn563ug5iim3h::::res://scenes/ui/display currencies.tscn<>uid://dc1u2q8x4yr1x::::res://scenes/bonfire.tscn
+main_level_scene.tscn::PackedScene::6726060737167468016::1721143185::0::1::::<><>::res://scripts/script_main_level_scene.gd<>uid://bti0gpwlyo1jt::::res://scenes/player.tscn<>uid://bmv1biglncgcx::::res://scenes/ui/hud.tscn<>res://scenes/test_script.gd<>uid://ct3yvmob8ot7r::::res://scenes/ui/dialog.tscn<>uid://bvvkcrl5i3g2m::::res://scenes/ui/pause-menu-new.tscn<>uid://vnhjp6hkeegc::::res://scenes/ui/vending-buff.tscn
+neolevel1.tscn::PackedScene::8860483883714333622::1721143185::0::1::::<><>::uid://cwddg5op7varu::::res://assets/environment/tiles-env-ground.png<>res://scenes/script_neolevel_1.gd<>uid://bon0akmwxl7bs::::res://assets/environment/tiles-env-nature.png<>uid://dc1u2q8x4yr1x::::res://scenes/bonfire.tscn<>uid://caxj5yptwwggt::::res://scenes/vending_machine.tscn
 obstacle_base.tscn::PackedScene::3064087434393164720::1715756747::0::1::::<><>::res://scripts/obstacle_base.gd<>uid://dn17b0a6wwgt7::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Fences.png
 obstacle_fire.tscn::PackedScene::2520695529840859723::1715756747::0::1::::<><>::res://scripts/obstacle_fire.gd<>uid://p5ruypu5p2i0::::res://addons/Sprout Lands - Sprites - Basic pack/Tilesets/Wooden House.png
-player.tscn::PackedScene::3738053196799177213::1721139007::0::1::::<><>::res://scripts/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg<>uid://de6mjoksfatb::::res://images/light.png<>uid://both8ivj4u1w7::::res://images/test-spritesheet.png<>uid://b2m5gwvp10skf::::res://images/idle-spritesheet.png<>uid://da01tpanv8wgo::::res://audios/sfx/072807_heavy-machine-gun-50-caliber-39765.mp3<>uid://dgdyd86ggt6q8::::res://images/shoot-spritesheet.png<>uid://crx4kq54xddky::::res://assets/character/died-spritesheet.png<>uid://ce5k06imh1egd::::res://scenes/ui/button_open_select_buff.tscn<>res://scripts/player_ui_handling.gd
+player.tscn::PackedScene::3738053196799177213::1721143185::0::1::::<><>::res://scripts/player.gd<>uid://d4mmoouo35s86::::res://images/Alice_Icon_resave.png<>uid://bxj3bxr7n1b2p::::res://images/weapon1.jpg<>uid://de6mjoksfatb::::res://images/light.png<>uid://both8ivj4u1w7::::res://images/test-spritesheet.png<>uid://b2m5gwvp10skf::::res://images/idle-spritesheet.png<>uid://da01tpanv8wgo::::res://audios/sfx/072807_heavy-machine-gun-50-caliber-39765.mp3<>uid://dgdyd86ggt6q8::::res://images/shoot-spritesheet.png<>uid://crx4kq54xddky::::res://assets/character/died-spritesheet.png<>uid://ce5k06imh1egd::::res://scenes/ui/button_open_select_buff.tscn<>res://scripts/player_ui_handling.gd
 projectile.tscn::PackedScene::2843286313954371500::1715756747::0::1::::<><>::res://scripts/projectile.gd<>uid://bixdc736ym1su::::res://images/projectile1.jpg
 script_neolevel_1.gd::GDScript::-1::1721138669::0::1::::<>Node2D<>::
 script_root_hud.gd::GDScript::-1::1721035972::0::1::::<>CanvasLayer<>::
 template_level.tscn::PackedScene::4243456884108897574::1720797037::0::1::::<><>::uid://bti0gpwlyo1jt::::res://scenes/player.tscn
-test_script.gd::GDScript::-1::1721139007::0::1::::<>CanvasLayer<>::
-vending_machine.tscn::PackedScene::4820923367107636007::1721139008::0::1::::<><>::res://script_vending_machine.gd<>uid://ogm3s468rerg::::res://assets/misc/amenities-vending-machine.png
-::res://scenes/ui/::1721139007
+test_script.gd::GDScript::-1::1721141238::0::1::::<>CanvasLayer<>::
+vending_machine.tscn::PackedScene::4820923367107636007::1721143185::0::1::::<><>::res://script_vending_machine.gd<>uid://ogm3s468rerg::::res://assets/misc/amenities-vending-machine.png
+::res://scenes/ui/::1721144940
 buff_selection.tscn::PackedScene::359671253519145880::1720794684::0::1::::<><>::res://scenes/ui/script_buff_selection.gd
-button_open_select_buff.tscn::PackedScene::5116181530473307935::1718802503::0::1::::<><>::res://scenes/ui/script_button_open_select_buff.gd
-dialog.tscn::PackedScene::6165727335118460477::1721139007::0::1::::<><>::res://scenes/ui/script_dialogue_scene.gd<>uid://7njfw8uw1dkw::::res://images/Shiroko_Portrait.webp<>uid://c5y7up2ccmwvp::::res://theme/0-opacity-panel.tres<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://b713hevup8vg6::::res://theme/dialog-panel-name.tres<>uid://8y47ra3tp5sl::::res://theme/ui-text-dialog.tres
+button_open_select_buff.tscn::PackedScene::5116181530473307935::1721143186::0::1::::<><>::res://scenes/ui/script_button_open_select_buff.gd
+dialog.tscn::PackedScene::6165727335118460477::1721143185::0::1::::<><>::res://scenes/ui/script_dialogue_scene.gd<>uid://7njfw8uw1dkw::::res://images/Shiroko_Portrait.webp<>uid://c5y7up2ccmwvp::::res://theme/0-opacity-panel.tres<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://b713hevup8vg6::::res://theme/dialog-panel-name.tres<>uid://8y47ra3tp5sl::::res://theme/ui-text-dialog.tres
 display currencies.tscn::PackedScene::8135581641110526959::1718802503::0::1::::<><>::res://scenes/ui/script_display_currency.gd
-hud.tscn::PackedScene::3273619597763453235::1721139007::0::1::::<><>::uid://ddjriciy5qgr1::::res://theme/ui-circular-button1.tres<>res://scenes/ui/script_hud.gd<>uid://b713hevup8vg6::::res://theme/dialog-panel-name.tres<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://jsyujjharlgm::::res://fonts/Quicksand/static/Quicksand-Regular.ttf<>uid://bek5xl8nbwsbk::::res://assets/UI/icon-skip.png<>uid://bxq2fhxqosngt::::res://assets/UI/icon-pause.png
-main_menu.tscn::PackedScene::5656739996057871247::1720794684::0::1::::<><>::res://scenes/ui/script_mainmenu.gd<>uid://qpo08ce2cos0::::res://images/art-8396377_1280.png
-pause-menu-new.tscn::PackedScene::3904349985707173658::1721139007::0::1::::<><>::res://scenes/ui/script_pause_menu_new.gd<>uid://cxwskgl2ej556::::res://theme/ui-dialog-pause-bg.tres<>uid://8y47ra3tp5sl::::res://theme/ui-text-dialog.tres<>uid://cem3xnf5d5pgt::::res://assets/UI/icon-buff-atk-boost.png<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://bdcmymoy8kb3l::::res://assets/UI/icon-cancel.png<>uid://bvyxkw3ly76kv::::res://fonts/Roboto/Roboto-Medium.ttf
+hud.tscn::PackedScene::3273619597763453235::1721143185::0::1::::<><>::uid://ddjriciy5qgr1::::res://theme/ui-circular-button1.tres<>res://scenes/ui/script_hud.gd<>uid://b713hevup8vg6::::res://theme/dialog-panel-name.tres<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://jsyujjharlgm::::res://fonts/Quicksand/static/Quicksand-Regular.ttf<>uid://bek5xl8nbwsbk::::res://assets/UI/icon-skip.png<>uid://bxq2fhxqosngt::::res://assets/UI/icon-pause.png
+main_menu.tscn::PackedScene::5656739996057871247::1721144940::0::1::::<><>::res://scenes/ui/script_mainmenu.gd<>uid://c1v40u34i17f1::::res://assets/misc/mainmenu-art.png<>uid://b713hevup8vg6::::res://theme/dialog-panel-name.tres
+pause-menu-new.tscn::PackedScene::3904349985707173658::1721143185::0::1::::<><>::res://scenes/ui/script_pause_menu_new.gd<>uid://cxwskgl2ej556::::res://theme/ui-dialog-pause-bg.tres<>uid://8y47ra3tp5sl::::res://theme/ui-text-dialog.tres<>uid://cem3xnf5d5pgt::::res://assets/UI/icon-buff-atk-boost.png<>uid://cs3ghhbnf5jh1::::res://theme/dialog-panel-text.tres<>uid://bdcmymoy8kb3l::::res://assets/UI/icon-cancel.png<>uid://bvyxkw3ly76kv::::res://fonts/Roboto/Roboto-Medium.ttf
 script_buff_selection.gd::GDScript::-1::1719489024::0::1::::<>Control<>::
-script_button_open_select_buff.gd::GDScript::-1::1718802307::0::1::::<>Node<>::
+script_button_open_select_buff.gd::GDScript::-1::1721141771::0::1::::<>Node<>::
 script_dialogue_scene.gd::GDScript::-1::1721139007::0::1::::<>Node<>::
 script_display_currency.gd::GDScript::-1::1718711510::0::1::::<>Node<>::
 script_hud.gd::GDScript::-1::1721139007::0::1::::<>Control<>::
-script_mainmenu.gd::GDScript::-1::1720633588::0::1::::<>Node<>::
+script_mainmenu.gd::GDScript::-1::1721144139::0::1::::<>Node<>::
 script_pause_menu_new.gd::GDScript::-1::1721117244::0::1::::<>Control<>::
 script_vending_buff.gd::GDScript::-1::1721109141::0::1::::<>Control<>::
-vending-buff.tscn::PackedScene::1501244554366728894::1721139007::0::1::::<><>::uid://c4j8gy4mkj8sx::::res://assets/UI/vending-machine.png<>uid://cxwskgl2ej556::::res://theme/ui-dialog-pause-bg.tres<>res://scenes/ui/script_vending_buff.gd<>uid://dd6yil274liai::::res://theme/vending-confirm-panel1.tres<>uid://cga7dy8tcsmfl::::res://theme/vending-confirm-panel2.tres<>uid://cl6v7bjfkbtyd::::res://assets/misc/buff-icons-sprites.png<>uid://b6lg6effeygcp::::res://theme/vending-confirm-button-yes.tres<>uid://bxj6n85ro2l24::::res://fonts/Poppins/Poppins-Regular.ttf
-::res://scripts/::1721123841
+vending-buff.tscn::PackedScene::1501244554366728894::1721143185::0::1::::<><>::uid://c4j8gy4mkj8sx::::res://assets/UI/vending-machine.png<>uid://cxwskgl2ej556::::res://theme/ui-dialog-pause-bg.tres<>res://scenes/ui/script_vending_buff.gd<>uid://dd6yil274liai::::res://theme/vending-confirm-panel1.tres<>uid://cga7dy8tcsmfl::::res://theme/vending-confirm-panel2.tres<>uid://cl6v7bjfkbtyd::::res://assets/misc/buff-icons-sprites.png<>uid://b6lg6effeygcp::::res://theme/vending-confirm-button-yes.tres<>uid://bxj6n85ro2l24::::res://fonts/Poppins/Poppins-Regular.ttf
+::res://scripts/::1721140942
 bonfire.gd::GDScript::-1::1718798343::0::1::::<>Node<>::
 enemy_1.gd::GDScript::-1::1714203152::0::1::::<>CharacterBody2D<>::
 enemy_1_debug.gd::GDScript::-1::1718712729::0::1::::<>CharacterBody2D<>::
@@ -1982,19 +1986,19 @@ level.gd::GDScript::-1::1721116373::0::1::::<>Node2D<>::
 obstacle_base.gd::GDScript::-1::1714707141::0::1::::<>Area2D<>::
 obstacle_fire.gd::GDScript::-1::1714709043::0::1::::<>Area2D<>::
 player.gd::GDScript::-1::1721123841::0::1::::<>CharacterBody2D<>::
-player_ui_handling.gd::GDScript::-1::1718801339::0::1::::<>Node<>::
+player_ui_handling.gd::GDScript::-1::1721140942::0::1::::<>Node<>::
 projectile.gd::GDScript::-1::1714674264::0::1::::<>Area2D<>::
 script_main_level_scene.gd::GDScript::-1::1721058361::0::1::::<>Node<>::
 TileMap2.gd::GDScript::-1::1714831689::0::1::::<>TileMap<>::
 ::res://scripts/debug/::1721116372
 GlobalDebugVars.gd::GDScript::-1::1721116372::0::1::::<>Node2D<>::
-::res://scripts/global/::1721138669
+::res://scripts/global/::1721140607
 GlobalCurrencies.gd::GDScript::-1::1718709518::0::1::::<>Node<>::
-GlobalEnvironment.gd::GDScript::-1::1721057375::0::1::::<>Node<>::
 GlobalDialogScene.gd::GDScript::-1::1721138669::0::1::::<>Node<>::
-::res://theme/::1721116373
+GlobalEnvironment.gd::GDScript::-1::1721140607::0::1::::<>Node<>::
+::res://theme/::1721144769
 0-opacity-panel.tres::Theme::6930031231925245745::1721116372::0::1::::<><>::
-dialog-panel-name.tres::Theme::4687850321534855159::1721116372::0::1::::<><>::
+dialog-panel-name.tres::Theme::4687850321534855159::1721144769::0::1::::<><>::uid://bvyxkw3ly76kv::::res://fonts/Roboto/Roboto-Medium.ttf<>uid://bucad3kf5mxvp::::res://addons/dialogue_nodes/icons/Play.svg
 dialog-panel-text.tres::Theme::6094420302305179212::1721116372::0::1::::<><>::
 ui-circular-button1.tres::Theme::7389454575544519636::1721116373::0::1::::<><>::
 ui-dialog-pause-bg.tres::Theme::6433712178824548027::1721116373::0::1::::<><>::
