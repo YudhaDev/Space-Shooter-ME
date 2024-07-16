@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://caxj5yptwwggt"]
+
+[ext_resource type="Script" path="res://script_vending_machine.gd" id="1_sx886"]
+[ext_resource type="Texture2D" uid="uid://ogm3s468rerg" path="res://assets/misc/amenities-vending-machine.png" id="2_hpsck"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xs1h"]
+radius = 100.901
+
+[node name="vending_machine" type="Node2D"]
+script = ExtResource("1_sx886")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_hpsck")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_0xs1h")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

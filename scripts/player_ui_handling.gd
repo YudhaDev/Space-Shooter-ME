@@ -8,9 +8,10 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
+	pass
 	#cek deket bonfire atau nggk
-	if global_env.isPlayerInBonfire == true:
-		$ButtonSelectBuff.visible = true
-	else:
-		$ButtonSelectBuff.visible = false
+	#if global_env.isPlayerInBonfire == true:
+		#$ButtonInteract.visible = true
+	#else:
+		#$ButtonInteract.visible = false

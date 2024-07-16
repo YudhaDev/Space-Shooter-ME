@@ -1,6 +1,10 @@
 extends Node
 
 var isPlayerInBonfire : bool = false
+var isPlayerInVending : bool = false
+var isPlayerInBillboard : bool = false
+
+
 var updateBuff : bool = false
 
 var _current_level = 1

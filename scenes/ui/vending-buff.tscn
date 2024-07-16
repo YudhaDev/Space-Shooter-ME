@@ -1,0 +1,346 @@
+[gd_scene load_steps=15 format=3 uid="uid://vnhjp6hkeegc"]
+
+[ext_resource type="Texture2D" uid="uid://c4j8gy4mkj8sx" path="res://assets/UI/vending-machine.png" id="1_26g6h"]
+[ext_resource type="Theme" uid="uid://cxwskgl2ej556" path="res://theme/ui-dialog-pause-bg.tres" id="1_s6th0"]
+[ext_resource type="Script" path="res://scenes/ui/script_vending_buff.gd" id="1_t36b3"]
+[ext_resource type="Theme" uid="uid://dd6yil274liai" path="res://theme/vending-confirm-panel1.tres" id="2_dbug3"]
+[ext_resource type="Theme" uid="uid://cga7dy8tcsmfl" path="res://theme/vending-confirm-panel2.tres" id="4_1iyce"]
+[ext_resource type="Texture2D" uid="uid://cl6v7bjfkbtyd" path="res://assets/misc/buff-icons-sprites.png" id="5_b6h1r"]
+[ext_resource type="Theme" uid="uid://b6lg6effeygcp" path="res://theme/vending-confirm-button-yes.tres" id="6_v50kn"]
+[ext_resource type="FontFile" uid="uid://bxj6n85ro2l24" path="res://fonts/Poppins/Poppins-Regular.ttf" id="7_vui74"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpcv0"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(3, 2, 58, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0tsy"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(131, 2, 58, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sku3s"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(259, 2, 58, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hq0ua"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(67, 2, 58, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq6ly"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(195, 2, 58, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei3j4"]
+atlas = ExtResource("5_b6h1r")
+region = Rect2(323, 2, 58, 92)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t36b3")
+
+[node name="vending-bg" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_s6th0")
+
+[node name="vending" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -181.5
+offset_top = -222.0
+offset_right = 181.5
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dbug3")
+texture = ExtResource("1_26g6h")
+
+[node name="buff1" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -172.0
+offset_right = 158.0
+offset_bottom = -80.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_cpcv0")
+
+[node name="buff1_cost" type="Panel" parent="vending-bg/buff1"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff1/buff1_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buff2" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 171.0
+offset_top = -172.0
+offset_right = 229.0
+offset_bottom = -80.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_i0tsy")
+
+[node name="buff2_cost" type="Panel" parent="vending-bg/buff2"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff2/buff2_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buff3" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 243.0
+offset_top = -172.0
+offset_right = 301.0
+offset_bottom = -80.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_sku3s")
+
+[node name="buff3_cost" type="Panel" parent="vending-bg/buff3"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff3/buff3_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buff4" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 100.0
+offset_top = -4.0
+offset_right = 158.0
+offset_bottom = 88.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_hq0ua")
+
+[node name="buff4_cost" type="Panel" parent="vending-bg/buff4"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff4/buff4_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buff5" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 171.0
+offset_top = -4.0
+offset_right = 229.0
+offset_bottom = 88.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_eq6ly")
+
+[node name="buff5_cost" type="Panel" parent="vending-bg/buff5"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff5/buff5_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="buff6" type="TextureRect" parent="vending-bg"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 243.0
+offset_top = -4.0
+offset_right = 301.0
+offset_bottom = 88.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_ei3j4")
+
+[node name="buff6_cost" type="Panel" parent="vending-bg/buff6"]
+layout_mode = 0
+offset_top = 98.0
+offset_right = 58.0
+offset_bottom = 116.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="vending-bg/buff6/buff6_cost"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 14
+text = "1000"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -112.0
+offset_right = -48.0
+offset_bottom = 112.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_dbug3")
+
+[node name="Panel2" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 23.0
+offset_top = 21.0
+offset_right = -23.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_1iyce")
+
+[node name="TextureRect" type="TextureRect" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 29.0
+offset_top = -56.0
+offset_right = 87.0
+offset_bottom = 36.0
+grow_vertical = 2
+texture = SubResource("AtlasTexture_cpcv0")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -222.0
+offset_top = -46.0
+offset_right = -40.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("7_vui74")
+theme_override_font_sizes/normal_font_size = 20
+text = "Beli Attack Boost seharga Rp 20?"
+
+[node name="yes" type="Panel" parent="Panel/Panel2"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 127.0
+offset_right = 195.0
+offset_bottom = 155.0
+theme = ExtResource("6_v50kn")
+
+[node name="Label" type="Label" parent="Panel/Panel2/yes"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -51.0
+grow_horizontal = 0
+grow_vertical = 2
+theme = ExtResource("6_v50kn")
+text = "Beli"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="vending-bg/buff1" to="." method="_on_buff_1_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff1" to="." method="_on_buff_1_mouse_exited"]
+[connection signal="mouse_entered" from="vending-bg/buff2" to="." method="_on_buff_2_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff2" to="." method="_on_buff_2_mouse_exited"]
+[connection signal="mouse_entered" from="vending-bg/buff3" to="." method="_on_buff_3_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff3" to="." method="_on_buff_3_mouse_exited"]
+[connection signal="mouse_entered" from="vending-bg/buff4" to="." method="_on_buff_4_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff4" to="." method="_on_buff_4_mouse_exited"]
+[connection signal="mouse_entered" from="vending-bg/buff5" to="." method="_on_buff_5_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff5" to="." method="_on_buff_5_mouse_exited"]
+[connection signal="mouse_entered" from="vending-bg/buff6" to="." method="_on_buff_6_mouse_entered"]
+[connection signal="mouse_exited" from="vending-bg/buff6" to="." method="_on_buff_6_mouse_exited"]

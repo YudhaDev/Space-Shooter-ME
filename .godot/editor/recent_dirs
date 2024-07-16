@@ -1,9 +1,11 @@
-res://theme
-H:/
+res://localization
+res://localization/POT
 res://scenes/ui
 res://scripts/global
-res://images
 res://scenes
+res://theme
+H:/
+res://images
 res://scripts/debug
 res://scripts
 res://

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.godot.game-mergeDebugResources-16:/values-sl/values-sl.xml",
+            "outputFile": "com.godot.game-mergeDebugResources-17:/values-sl/values-sl.xml",
             "map": [
                 {
                     "source": "H:\\godot-projects\\Space Shooter ME\\android\\build\\res\\values-sl\\godot_project_name_string.xml",

@@ -1,0 +1,28 @@
+# LANGUAGE translation for Space Shooter ME for the following files:
+# res://scenes/ui/main_menu.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Space Shooter ME\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: scenes/ui/main_menu.tscn
+msgid "mainmenu_play_btn"
+msgstr ""
+
+#: scenes/ui/main_menu.tscn
+msgid "mainmenu_galery_btn"
+msgstr ""
+
+#: scenes/ui/main_menu.tscn
+msgid "mainmenu_setting_btn"
+msgstr ""
+
+#: scenes/ui/main_menu.tscn
+msgid "mainmenu_quit_btn"
+msgstr ""

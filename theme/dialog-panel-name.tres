@@ -1,4 +1,14 @@
-[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b713hevup8vg6"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://b713hevup8vg6"]
+
+[ext_resource type="FontFile" uid="uid://bvyxkw3ly76kv" path="res://fonts/Roboto/Roboto-Medium.ttf" id="1_0r3o7"]
+[ext_resource type="Texture2D" uid="uid://bucad3kf5mxvp" path="res://addons/dialogue_nodes/icons/Play.svg" id="2_k78hk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4jvml"]
+bg_color = Color(0.129412, 0.109804, 0.168627, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk3hf"]
 content_margin_left = 0.0
@@ -9,4 +19,7 @@ bg_color = Color(0.1292, 0.1088, 0.17, 1)
 corner_detail = 5
 
 [resource]
+Button/fonts/font = ExtResource("1_0r3o7")
+Button/icons/icon = ExtResource("2_k78hk")
+Button/styles/normal = SubResource("StyleBoxFlat_4jvml")
 Panel/styles/panel = SubResource("StyleBoxFlat_sk3hf")

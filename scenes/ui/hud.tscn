@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://bmv1biglncgcx"]
+
+[ext_resource type="Theme" uid="uid://ddjriciy5qgr1" path="res://theme/ui-circular-button1.tres" id="1_2g3si"]
+[ext_resource type="Script" path="res://scenes/ui/script_hud.gd" id="1_jjs3w"]
+[ext_resource type="Theme" uid="uid://b713hevup8vg6" path="res://theme/dialog-panel-name.tres" id="2_rgv51"]
+[ext_resource type="Theme" uid="uid://cs3ghhbnf5jh1" path="res://theme/dialog-panel-text.tres" id="3_oyb4r"]
+[ext_resource type="FontFile" uid="uid://jsyujjharlgm" path="res://fonts/Quicksand/static/Quicksand-Regular.ttf" id="3_qivmw"]
+[ext_resource type="Texture2D" uid="uid://bek5xl8nbwsbk" path="res://assets/UI/icon-skip.png" id="5_beey7"]
+[ext_resource type="Texture2D" uid="uid://bxq2fhxqosngt" path="res://assets/UI/icon-pause.png" id="6_qqpl5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w0jra"]
+bg_color = Color(0.924436, 0.744576, 0.108428, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+corner_detail = 10
+
+[node name="hud_base" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jjs3w")
+
+[node name="currency-panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 88.0
+offset_bottom = 88.0
+theme = ExtResource("1_2g3si")
+
+[node name="Panel2" type="Panel" parent="currency-panel"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 5.0
+offset_right = 172.0
+offset_bottom = 46.0
+theme = ExtResource("2_rgv51")
+
+[node name="Label" type="Label" parent="currency-panel/Panel2"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -115.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_qivmw")
+
+[node name="Panel" type="Panel" parent="currency-panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = 57.0
+grow_horizontal = 2
+theme = ExtResource("1_2g3si")
+theme_override_styles/panel = SubResource("StyleBoxFlat_w0jra")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 20.0
+offset_right = -28.0
+offset_bottom = 144.0
+grow_horizontal = 0
+
+[node name="pause-btn" type="Panel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+theme = ExtResource("3_oyb4r")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/pause-btn"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 15.0
+offset_top = -16.0
+offset_right = 11.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.485, 0.485)
+texture = ExtResource("6_qqpl5")
+
+[node name="skip-dialog-btn" type="Panel" parent="VBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(52, 52)
+layout_mode = 2
+theme = ExtResource("3_oyb4r")
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/skip-dialog-btn"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 9.0
+offset_top = -16.0
+offset_right = 9.0
+offset_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.665, 0.665)
+texture = ExtResource("5_beey7")
+
+[connection signal="mouse_entered" from="VBoxContainer/pause-btn" to="." method="_on_pausebtn_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/pause-btn" to="." method="_on_pausebtn_mouse_exited"]
+[connection signal="mouse_entered" from="VBoxContainer/skip-dialog-btn" to="." method="_on_skipdialogbtn_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/skip-dialog-btn" to="." method="_on_skipdialogbtn_mouse_exited"]

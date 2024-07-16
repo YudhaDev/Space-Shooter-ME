@@ -20,9 +20,15 @@ attr fontVariationSettings
 attr fontWeight
 attr lStar
 attr nestedScrollViewStyle
+attr postSplashScreenTheme
 attr queryPatterns
 attr shortcutMatchRequired
+attr splashScreenIconSize
 attr ttcIndex
+attr windowSplashScreenAnimatedIcon
+attr windowSplashScreenAnimationDuration
+attr windowSplashScreenBackground
+attr windowSplashScreenIconBackgroundColor
 color androidx_core_ripple_material_light
 color androidx_core_secondary_text_default_material_light
 color notification_action_color_filter
@@ -49,7 +55,17 @@ dimen notification_small_icon_size_as_large
 dimen notification_subtext_size
 dimen notification_top_pad
 dimen notification_top_pad_large_text
+dimen splashscreen_icon_mask_size_no_background
+dimen splashscreen_icon_mask_size_with_background
+dimen splashscreen_icon_mask_stroke_no_background
+dimen splashscreen_icon_mask_stroke_with_background
+dimen splashscreen_icon_size
+dimen splashscreen_icon_size_no_background
+dimen splashscreen_icon_size_with_background
 dimen text_edit_height
+drawable compat_splash_screen
+drawable compat_splash_screen_no_icon_background
+drawable icon_background
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -62,9 +78,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable splash
-drawable splash_bg_color
-drawable splash_drawable
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -142,6 +155,7 @@ id resumeOverCellular
 id right_icon
 id right_side
 id special_effects_controller_view_tag
+id splashscreen_icon_view
 id statusText
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -169,6 +183,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible_removing_fragment_view_tag
 id wifiSettingsButton
+integer default_icon_animation_duration
 integer status_bar_notification_info_maxnum
 layout custom_dialog
 layout downloading_expansion
@@ -179,6 +194,7 @@ layout notification_template_custom_big
 layout notification_template_icon_group
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout splash_screen_view
 layout status_bar_ongoing_event_progress_bar
 mipmap icon
 mipmap icon_background
@@ -223,6 +239,13 @@ string text_validation_failed
 string text_verifying_download
 string time_remaining
 string time_remaining_notification
+style Base_Theme_SplashScreen
+style Base_Theme_SplashScreen_DayNight
+style Base_Theme_SplashScreen_Light
+style Base_v21_Theme_SplashScreen
+style Base_v21_Theme_SplashScreen_Light
+style Base_v27_Theme_SplashScreen
+style Base_v27_Theme_SplashScreen_Light
 style ButtonBackground
 style GodotAppMainTheme
 style GodotAppSplashTheme
@@ -234,6 +257,9 @@ style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
+style Theme_SplashScreen
+style Theme_SplashScreen_Common
+style Theme_SplashScreen_IconBackground
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 styleable Capability queryPatterns shortcutMatchRequired

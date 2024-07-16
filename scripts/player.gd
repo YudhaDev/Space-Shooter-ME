@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var player_speed:float = 10
+@export var player_speed:float = 100
 
 var _base_movement_speed = 1
 var _calculated_movement_speed = 0

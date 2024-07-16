@@ -1,42 +1,67 @@
 extends Node
+@onready var node_global_dialog = get_node("/root/GlobalDialogScene")
 
-var arrTextToDisplay = []
+var isTalking : bool = false
+var temp :String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Button.show()
+	node_global_dialog.connect("animate_the_text", anim_text)
+	
+	#$Button.show()
 	#connect("gui_input", on_panel_clicked)
 	pass # Replace with function body.
 
-#func _input(event):
-	#if event is InputEventMouseButton:
-		#if event.pressed:
-			#print("hey")
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	resizePanelDialog()
 	pass
 
-func process_text(textdialog : String) -> Array:
-	var array :Array = []
-	for huruf in textdialog:
-		array.append(str(huruf))
-	return array
+func resizePanelDialog():
+	var text :RichTextLabel = $Panel_dialog/dialog_text
+	var panel :Panel = $Panel_dialog
+	
+	var texty = text.size.y
+	panel.size.y = texty + 30
 
 func _on_button_pressed():
-	arrTextToDisplay = process_text("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.")
-	anim_text()
+	if isTalking:
+		stop_talking()
+		completeDisplaying()
+	else:
+		next_dialog()
 	
 func anim_text():
+	#print("yahoooooooooo")
+	isTalking = true
 	$Timerdisplaytext.start()
 
+func next_dialog():
+	$Panel_dialog/dialog_text.clear()
+	temp = ""
+	node_global_dialog.doDialog()
+
+func stop_talking():
+	$Timerdisplaytext.stop()
+	isTalking = false
+	
+func completeDisplaying():
+	var temp = ""
+	for huruf in node_global_dialog.arrTextToDisplay:
+		temp = temp + huruf
+	$Panel_dialog/dialog_text.append_text(temp) 
+	pass
+
 func _on_timerdisplaytext_timeout():
+	var arrTextToDisplay :Array = node_global_dialog.arrTextToDisplay
 	if arrTextToDisplay.size() != 0:
-		$Panel/dialog_text.append_text(str(arrTextToDisplay.front()))
+		temp = temp + arrTextToDisplay.front()
+		$Panel_dialog/dialog_text.text = temp
+		#"[left]"+temp+"[/left]" 
+		#append_text("[center]"+temp+"[/center]")
 		arrTextToDisplay.remove_at(0)
 	else:
-		$Timerdisplaytext.stop()
-		new_text_dialog()
+		stop_talking()
 
-func new_text_dialog():
-	pass
+#func new_text_dialog():
+	#pass
