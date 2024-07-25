@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://vnhjp6hkeegc" path="res://scenes/ui/vending-buff.tscn" id="6_twdue"]
 
 [node name="MainLevelScene" type="Node2D"]
+process_priority = -1
 script = ExtResource("1_s68e7")
 
 [node name="Main2D" type="Node2D" parent="."]
@@ -44,6 +45,7 @@ visible = false
 
 [node name="Audio" type="Node2D" parent="."]
 
-[connection signal="showVendingBuff" from="." to="HUD" method="_on_main_level_scene_show_vending_buff"]
+[node name="level-script" type="Node2D" parent="."]
+
 [connection signal="pressed_button" from="HUD/level0/hud_level" to="HUD" method="_on_hud_level_pressed_button"]
 [connection signal="pauseEventSignal" from="HUD/level1/pause" to="HUD" method="_on_pause_pause_event_signal"]

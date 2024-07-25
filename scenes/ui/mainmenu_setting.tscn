@@ -1,0 +1,49 @@
+[gd_scene load_steps=2 format=3 uid="uid://bk45ujrjmxmmb"]
+
+[ext_resource type="Script" path="res://scenes/ui/script_mainmenu_setting.gd" id="1_3s612"]
+
+[node name="Mainmenu_setting" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3s612")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.0995316
+anchor_right = 0.9
+anchor_bottom = 0.899297
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.125
+anchor_top = 0.0395315
+anchor_right = 0.875
+anchor_bottom = 0.156662
+grow_horizontal = 2
+text = "mainmenu_setting_label"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="back_btn" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.847731
+anchor_right = 1.0
+anchor_bottom = 0.918009
+grow_horizontal = 2
+grow_vertical = 0
+text = "mainmenu_setting_back_btn"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="button_up" from="Panel/back_btn" to="." method="_on_back_btn_button_up"]

@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cmufxfs3lidl4"]
+[gd_scene load_steps=9 format=3 uid="uid://cmufxfs3lidl4"]
 
 [ext_resource type="Script" path="res://scenes/ui/script_mainmenu.gd" id="1_8u70x"]
 [ext_resource type="Texture2D" uid="uid://c1v40u34i17f1" path="res://assets/misc/mainmenu-art.png" id="2_4ytev"]
 [ext_resource type="Theme" uid="uid://b713hevup8vg6" path="res://theme/dialog-panel-name.tres" id="3_dwg5m"]
+[ext_resource type="Theme" uid="uid://cs3ghhbnf5jh1" path="res://theme/dialog-panel-text.tres" id="4_44hiy"]
+[ext_resource type="AudioStream" uid="uid://cfqt737jom1t8" path="res://audios/bgm/main-bgm.ogg" id="5_e8oel"]
+[ext_resource type="Theme" uid="uid://8y47ra3tp5sl" path="res://theme/ui-text-dialog.tres" id="5_o8by1"]
+[ext_resource type="PackedScene" uid="uid://cty55w37pecb6" path="res://scenes/ui/mainmenu_gallery.tscn" id="7_br607"]
+[ext_resource type="PackedScene" uid="uid://bk45ujrjmxmmb" path="res://scenes/ui/mainmenu_setting.tscn" id="8_kwn2l"]
 
 [node name="mainmenu" type="Control"]
 layout_mode = 3
@@ -24,23 +29,125 @@ texture = ExtResource("2_4ytev")
 
 [node name="mainmenu_play_btn" type="Button" parent="."]
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 1.0
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 1.0
+anchor_bottom = 0.5
 offset_left = -176.0
-offset_top = -606.0
-offset_bottom = -551.0
+offset_top = -99.0
+offset_right = 80.0
+offset_bottom = -44.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 theme = ExtResource("3_dwg5m")
-text = "mainmenu_play_btn"
 alignment = 2
 clip_text = true
 expand_icon = true
 
+[node name="Label" type="Label" parent="mainmenu_play_btn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 27
+text = "mainmenu_play_btn"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="gallery_btn" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = -35.0
+offset_right = -40.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_44hiy")
+
+[node name="Label" type="Label" parent="gallery_btn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_o8by1")
+theme_override_font_sizes/font_size = 27
+text = "mainmenu_galery_btn"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="setting_btn" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = 21.0
+offset_right = -48.0
+offset_bottom = 69.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_44hiy")
+
+[node name="Label" type="Label" parent="setting_btn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_o8by1")
+theme_override_font_sizes/font_size = 27
+text = "mainmenu_setting_btn"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="quit_btn" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = 349.0
+offset_right = -84.0
+offset_bottom = 397.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.159485
+theme = ExtResource("4_44hiy")
+
+[node name="Label" type="Label" parent="quit_btn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_o8by1")
+theme_override_font_sizes/font_size = 27
+text = "mainmenu_quit_btn"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="mainmenu_galery_btn" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -56,6 +163,7 @@ grow_vertical = 0
 text = "mainmenu_galery_btn"
 
 [node name="mainmenu_setting_btn" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -86,6 +194,7 @@ grow_vertical = 0
 text = "test"
 
 [node name="mainmenu_quit_btn" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -100,7 +209,25 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "mainmenu_quit_btn"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_e8oel")
+autoplay = true
+
+[node name="another_hud" type="CanvasLayer" parent="."]
+
+[node name="MainmenuGallery" parent="another_hud" instance=ExtResource("7_br607")]
+visible = false
+
+[node name="Mainmenu_setting" parent="another_hud" instance=ExtResource("8_kwn2l")]
+visible = false
+
 [connection signal="pressed" from="mainmenu_play_btn" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="gallery_btn" to="." method="_on_gallery_btn_mouse_entered"]
+[connection signal="mouse_exited" from="gallery_btn" to="." method="_on_gallery_btn_mouse_exited"]
+[connection signal="mouse_entered" from="setting_btn" to="." method="_on_setting_btn_mouse_entered"]
+[connection signal="mouse_exited" from="setting_btn" to="." method="_on_setting_btn_mouse_exited"]
+[connection signal="mouse_entered" from="quit_btn" to="." method="_on_quit_btn_mouse_entered"]
+[connection signal="mouse_exited" from="quit_btn" to="." method="_on_quit_btn_mouse_exited"]
 [connection signal="pressed" from="mainmenu_galery_btn" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="mainmenu_setting_btn" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="test" to="." method="_on_test_pressed"]

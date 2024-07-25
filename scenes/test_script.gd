@@ -5,20 +5,26 @@ extends CanvasLayer
 @onready var level2 = $level2
 @onready var global_dialog = get_node("/root/GlobalDialogScene")
 @onready var arrLevel = [level0,level1,level2]
+@onready var mainLevel = $"../Main2D"
 
 var current_hud_level = 0
 var ui_selected : String = ""
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	arrLevel[0].visible = true
-	global_dialog.connect("end_the_conversation", end_conversation)
-	$"../Player/player".find_child("ButtonInteract").connect("openVendingUI", openVendingUi)
-	print("tttttesst"+str($"../Player/player".find_child("ButtonInteract")))
+	mainLevel.connect("mainLevelScriptReady", mainLevelScriptReady)
+	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func mainLevelScriptReady():
+	print("masuk hud")
+	arrLevel[0].visible = true
+	global_dialog.connect("end_the_conversation", end_conversation)
+
+func playerAroundVending(boolean:bool):
+	print("oha:"+str(boolean))
 
 func end_conversation():
 	$level0/dialog.visible = false

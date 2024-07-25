@@ -2,13 +2,15 @@ extends Node
 
 @onready var global_env = get_node("/root/GlobalEnvironment") 
 var level1 = preload("res://scenes/neolevel1.tscn")
-signal showVendingBuff
-
 var level_instance : Node
+
+signal mainLevelScriptReady
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	print("main level first")
 	load_level(str(global_env._current_level))
-
+	mainLevelScriptReady.emit()
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
@@ -42,6 +44,5 @@ func interactHandling(event : InputEvent) -> void:
 	elif global_env.isPlayerInVending:
 		if event.is_pressed() && Input.is_action_pressed("interact"):
 			#show vending buff
-			showVendingBuff.emit()
 			pass
 			

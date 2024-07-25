@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://c23ficywdbky7"]
+
+[ext_resource type="Script" path="res://scripts/script_main_level_scene.gd" id="1_s68e7"]
+[ext_resource type="PackedScene" uid="uid://bti0gpwlyo1jt" path="res://scenes/player.tscn" id="2_j4pvr"]
+[ext_resource type="PackedScene" uid="uid://bmv1biglncgcx" path="res://scenes/ui/hud.tscn" id="2_uri4q"]
+[ext_resource type="Script" path="res://scenes/test_script.gd" id="3_7guvl"]
+[ext_resource type="PackedScene" uid="uid://ct3yvmob8ot7r" path="res://scenes/ui/dialog.tscn" id="5_8ce7c"]
+[ext_resource type="PackedScene" uid="uid://bvvkcrl5i3g2m" path="res://scenes/ui/pause-menu-new.tscn" id="5_ukmfw"]
+[ext_resource type="PackedScene" uid="uid://vnhjp6hkeegc" path="res://scenes/ui/vending-buff.tscn" id="6_twdue"]
+
+[node name="MainLevelScene" type="Node2D"]
+process_priority = -1
+script = ExtResource("1_s68e7")
+
+[node name="Main2D" type="Node2D" parent="."]
+
+[node name="Timer" type="Node2D" parent="."]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="player" parent="Player" instance=ExtResource("2_j4pvr")]
+position = Vector2(269, 141)
+scale = Vector2(0.3, 0.3)
+
+[node name="HUD" type="CanvasLayer" parent="."]
+script = ExtResource("3_7guvl")
+
+[node name="level0" type="CanvasLayer" parent="HUD"]
+
+[node name="hud_level" parent="HUD/level0" instance=ExtResource("2_uri4q")]
+
+[node name="dialog" parent="HUD/level0" instance=ExtResource("5_8ce7c")]
+
+[node name="level1" type="CanvasLayer" parent="HUD"]
+
+[node name="pause" parent="HUD/level1" instance=ExtResource("5_ukmfw")]
+process_mode = 2
+visible = false
+
+[node name="vending_buff" parent="HUD/level1" instance=ExtResource("6_twdue")]
+visible = false
+
+[node name="level2" type="CanvasLayer" parent="HUD"]
+visible = false
+
+[node name="Audio" type="Node2D" parent="."]
+
+[node name="level-script" type="Node2D" parent="."]
+
+[connection signal="pressed_button" from="HUD/level0/hud_level" to="HUD" method="_on_hud_level_pressed_button"]
+[connection signal="pauseEventSignal" from="HUD/level1/pause" to="HUD" method="_on_pause_pause_event_signal"]
