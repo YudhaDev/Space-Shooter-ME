@@ -1,16 +1,22 @@
 extends Node
 
-@onready var global_env = get_node("/root/GlobalEnvironment") 
+#@onready var global_env = get_node("/root/GlobalEnvironment") 
 var level1 = preload("res://scenes/neolevel1.tscn")
 var level_instance : Node
 
 signal mainLevelScriptReady
 
-# Called when the node enters the scene tree for the first time.
+func _enter_tree() -> void:
+	GlobalEnvironment._hud_element = get_child(3)
+	GlobalEnvironment._audio_element = get_child(4)
+	
 func _ready():
 	print("main level first")
-	load_level(str(global_env._current_level))
+	load_level(str(GlobalEnvironment._current_level))
 	mainLevelScriptReady.emit()
+	printerr(GlobalEnvironment._hud_element)
+
+	
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
@@ -37,11 +43,11 @@ func unload_level():
 	level_instance = null
 
 func interactHandling(event : InputEvent) -> void:
-	if global_env.isPlayerInBonfire:
+	if GlobalEnvironment.isPlayerInBonfire:
 		if event.is_pressed() && Input.is_action_pressed("interact"):
 			#heal the player
 			pass
-	elif global_env.isPlayerInVending:
+	elif GlobalEnvironment.isPlayerInVending:
 		if event.is_pressed() && Input.is_action_pressed("interact"):
 			#show vending buff
 			pass

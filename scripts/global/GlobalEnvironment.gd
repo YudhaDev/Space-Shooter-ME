@@ -4,10 +4,16 @@ var isPlayerInBonfire : bool = false
 var isPlayerInVending : bool = false
 var isPlayerInBillboard : bool = false
 
-
 var updateBuff : bool = false
 
 var _current_level = 1
+
+var _hud_element = null
+var _audio_element = null
+
+var bg_asset_dictionary = {
+	"bg_sky1" : load("res://images/sky.jpg"),
+}
 
 #formatnya idbuff:namabuff:totalstagenya:stage1buff,stage2buff,stage3buff... so on. jika ada tanda $ berrti peningkatan stagenya sama untuk semua sisa stagenya. contoh pada buff player-hp-up, dengan total stage 5 dan 10$. berrti tiap stage akan menambah 10hp terus dengan sama. jika ada tanda "stack" diakhir brrti tipe buffnya itu stacking, misal stage 1 nambah hp 10, upgrade ke stage 2 yg mana hp +10 juga brrti total penambahan hpnya skrg +20
 var playerBasedBuffs = ["player01:player-hp-up:5:10$:stack", 
