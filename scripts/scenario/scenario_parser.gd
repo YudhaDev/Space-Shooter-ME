@@ -21,7 +21,7 @@ func parse(array : Array):
 			"fade_out":
 				scenario_dialog_engine.fadeOut()
 			"narration":
-				scenario_dialog_engine.
+				scenario_dialog_engine.middleFormat()
 			"background":
 				#set background
 				pass

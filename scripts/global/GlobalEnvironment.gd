@@ -11,6 +11,8 @@ var _current_level = 1
 var _hud_element = null
 var _audio_element = null
 
+var _main_camera = null
+
 var bg_asset_dictionary = {
 	"bg_sky1" : load("res://images/sky.jpg"),
 }

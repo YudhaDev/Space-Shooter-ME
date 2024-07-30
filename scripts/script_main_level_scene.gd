@@ -9,6 +9,7 @@ signal mainLevelScriptReady
 func _enter_tree() -> void:
 	GlobalEnvironment._hud_element = get_child(3)
 	GlobalEnvironment._audio_element = get_child(4)
+	GlobalEnvironment._main_camera = find_child("player", true, false).find_child("Camera2D", true, false)
 	
 func _ready():
 	print("main level first")

@@ -11,13 +11,19 @@ var rng_shake = RandomNumberGenerator.new()
 var current_shake_strength: float = 0.0
 
 var dialog_hud = null #dialog element di main_level_scene
-var dialog
+var dialog_left_format :Control= null
+var dialog_right_format :Control= null
+var dialog_middle_format :Control= null
 
 var dialog_format = "left"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	node_global_dialog.connect("animate_the_text", anim_text)
+	
+	dialog_left_format = find_child("left_format", true, false)
+	dialog_middle_format = find_child("middle_format", true, false)
+	dialog_right_format = find_child("right_format", true, false)
 	
 	#$Button.show()
 	#connect("gui_input", on_panel_clicked)
@@ -38,6 +44,24 @@ func resizePanelDialog():
 	
 	var texty = text.size.y
 	panel.size.y = texty + 30
+	
+func middleFormat():
+	changeDisplayFormat("middle")
+	dialog_left_format.visible = false
+	dialog_middle_format.visible = true
+	dialog_right_format.visible = false
+
+func leftFormat():
+	changeDisplayFormat("left")
+	dialog_left_format.visible = true
+	dialog_middle_format.visible = false
+	dialog_right_format.visible = false
+
+func rightFormat():
+	changeDisplayFormat("right")
+	dialog_left_format.visible = false
+	dialog_middle_format.visible = false
+	dialog_right_format.visible = true
 
 func changeDisplayFormat(format: String):
 	match format:
@@ -66,8 +90,6 @@ func anim_text_narration():
 	isTalking = true
 	$Timerdisplaytext.start()
 	pass
-
-
 
 func next_dialog():
 	$Panel_dialog/dialog_text.clear()
