@@ -17,14 +17,15 @@ var dialog_middle_format :Control= null
 
 var dialog_format = "left"
 
+signal job_done
 # Called when the node enters the scene tree for the first time.
+
 func _ready():
 	node_global_dialog.connect("animate_the_text", anim_text)
 	
-	dialog_left_format = find_child("left_format", true, false)
-	dialog_middle_format = find_child("middle_format", true, false)
-	dialog_right_format = find_child("right_format", true, false)
-	
+	dialog_left_format = GlobalEnvironment._main_level_scene.find_child("left_format", true, false)
+	dialog_middle_format = GlobalEnvironment._main_level_scene.find_child("middle_format", true, false)
+	dialog_right_format = GlobalEnvironment._main_level_scene.find_child("right_format", true, false)
 	#$Button.show()
 	#connect("gui_input", on_panel_clicked)
 	pass # Replace with function body.
@@ -47,9 +48,12 @@ func resizePanelDialog():
 	
 func middleFormat():
 	changeDisplayFormat("middle")
-	dialog_left_format.visible = false
-	dialog_middle_format.visible = true
-	dialog_right_format.visible = false
+	if dialog_left_format != null:
+		dialog_left_format.visible = false
+		dialog_middle_format.visible = true
+		dialog_right_format.visible = false
+	else:
+		printerr("isinya null")
 
 func leftFormat():
 	changeDisplayFormat("left")
@@ -134,12 +138,7 @@ func changeBackground():
 	pass
 
 func fadeIn():
-	#find_child("fade", true, false).play("fade_in")
-	#print("bjir")
-	#print("arsiparis "+str(find_child("fade", false, true)))
-	
-	#print(str(GlobalEnvironment._hud_element))
-	
+	#print("masuk fadein")
 	if GlobalEnvironment._hud_element != null:
 		dialog_hud = GlobalEnvironment._hud_element.find_child("dialog", true, false)
 	else:
@@ -147,7 +146,10 @@ func fadeIn():
 	
 	if (dialog_hud) != null:
 		dialog_hud.find_child("fade").play("fade_in")
-		print(dialog_hud.find_child("fade"))
+	
+	while dialog_hud.find_child("fade").is_playing():
+		pass
+	job_done.emit()
 	
 func fadeOut():
 	#$fade.play("fade_out")

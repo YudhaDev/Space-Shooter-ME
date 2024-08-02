@@ -10,13 +10,15 @@ func _enter_tree() -> void:
 	GlobalEnvironment._hud_element = get_child(3)
 	GlobalEnvironment._audio_element = get_child(4)
 	GlobalEnvironment._main_camera = find_child("player", true, false).find_child("Camera2D", true, false)
+	GlobalEnvironment._main_level_scene = get_tree().current_scene
+	#print(str(get_tree().current_scene))
 	
 func _ready():
-	print("main level first")
+	GlobalEnvironment._main_level_scene = get_tree().current_scene
 	load_level(str(GlobalEnvironment._current_level))
 	mainLevelScriptReady.emit()
-	printerr(GlobalEnvironment._hud_element)
-
+	#printerr(GlobalEnvironment._hud_element)
+	#print("main level first")
 	
 	pass # Replace with function body.
 
