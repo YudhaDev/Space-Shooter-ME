@@ -4,12 +4,14 @@ extends Node
 var dialog_scene = null
 
 var index_now = 0
-
+var threadParser :Thread = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	#print(str(GlobalEnvironment._main_level_scene))
 	#dialog_scene = GlobalEnvironment._main_level_scene.find_child("dialog", true, false).get_script()
+	if threadParser == null:
+		threadParser = Thread.new()
 	printerr(str(GlobalEnvironment._main_level_scene))
 	var dialog_scene_script = GlobalEnvironment._main_level_scene.find_child("dialog", true, false).get_script()
 	dialog_scene = dialog_scene_script.new()
@@ -24,6 +26,9 @@ func job_done():
 	pass
 
 func parse(array : Array):
+	if threadParser == null:
+		threadParser = Thread.new()
+		
 	if GlobalEnvironment._main_level_scene != null and dialog_scene == null:
 		var dialog_scene_script = GlobalEnvironment._main_level_scene.find_child("dialog", true, false).get_script()
 		dialog_scene = dialog_scene_script.new()
@@ -37,7 +42,8 @@ func parse(array : Array):
 		#a.fadeIn()
 		match format[2]:
 			"fade_in":
-				dialog_scene.fadeIn()
+				threadParser.start(dialog_scene.fadeIn)
+				#dialog_scene.fadeIn()
 			"fade_out":
 				dialog_scene.fadeOut()
 			"narration":
@@ -52,3 +58,6 @@ func parse(array : Array):
 				#do nothing
 				pass
 	pass
+
+func _exit_tree() -> void:
+	threadParser.wait_to_finish()

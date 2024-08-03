@@ -1,5 +1,6 @@
 extends Node
-@onready var node_global_dialog = get_node("/root/GlobalDialogScene")
+#@onready var node_global_dialog = get_node("/root/GlobalDialogScene")
+@onready var node_global_dialog = GlobalEnvironment._hud_element.find_child("dialog", true, false)
 
 var isTalking : bool = false
 var temp :String = ""
@@ -10,7 +11,7 @@ var shake_fade: float = 5
 var rng_shake = RandomNumberGenerator.new()
 var current_shake_strength: float = 0.0
 
-var dialog_hud = null #dialog element di main_level_scene
+#var dialog_hud = null #dialog element di main_level_scene
 var dialog_left_format :Control= null
 var dialog_right_format :Control= null
 var dialog_middle_format :Control= null
@@ -21,8 +22,8 @@ signal job_done
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	node_global_dialog.connect("animate_the_text", anim_text)
-	
+	printerr("masuk ready dealogue_scene")
+	#node_global_dialog.connect("animate_the_text", anim_text)
 	dialog_left_format = GlobalEnvironment._main_level_scene.find_child("left_format", true, false)
 	dialog_middle_format = GlobalEnvironment._main_level_scene.find_child("middle_format", true, false)
 	dialog_right_format = GlobalEnvironment._main_level_scene.find_child("right_format", true, false)
@@ -42,7 +43,6 @@ func _process(delta):
 func resizePanelDialog():
 	var text :RichTextLabel = find_child("left_dialog_text", true, false)
 	var panel :Panel = find_child("left_panel_dialog", true, false)
-	
 	var texty = text.size.y
 	panel.size.y = texty + 30
 	
@@ -139,15 +139,18 @@ func changeBackground():
 
 func fadeIn():
 	#print("masuk fadein")
-	if GlobalEnvironment._hud_element != null:
-		dialog_hud = GlobalEnvironment._hud_element.find_child("dialog", true, false)
-	else:
-		printerr("hud element tidak ditemukan")
+	#if GlobalEnvironment._hud_element != null:
+		#dialog_hud = GlobalEnvironment._hud_element.find_child("dialog", true, false)
+	#else:
+		#printerr("hud element tidak ditemukan")
 	
-	if (dialog_hud) != null:
-		dialog_hud.find_child("fade").play("fade_in")
-	
-	while dialog_hud.find_child("fade").is_playing():
+	#if (dialog_hud) != null:
+		#dialog_hud.find_child("fade").play("fade_in")
+	printerr("tf"+str(GlobalEnvironment._dialog_scene))
+	GlobalEnvironment._dialog_scene.find_child("fade").play("fade_in")
+	while GlobalEnvironment._dialog_scene.find_child("fade").is_playing():
+		print(GlobalEnvironment._dialog_scene.find_child("fade").is_playing())
+		OS.delay_msec(1000)
 		pass
 	job_done.emit()
 	

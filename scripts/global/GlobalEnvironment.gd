@@ -8,7 +8,8 @@ var updateBuff : bool = false
 
 var _current_level = 1
 
-var _hud_element = null
+var _hud_element : CanvasLayer = null
+var _dialog_scene : Control = null
 var _audio_element = null
 
 var _main_camera = null
