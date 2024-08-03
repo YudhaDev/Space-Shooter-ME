@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://c23ficywdbky7"]
+[gd_scene load_steps=9 format=3 uid="uid://c23ficywdbky7"]
 
 [ext_resource type="Script" path="res://scripts/script_main_level_scene.gd" id="1_s68e7"]
 [ext_resource type="PackedScene" uid="uid://bti0gpwlyo1jt" path="res://scenes/player.tscn" id="2_j4pvr"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ct3yvmob8ot7r" path="res://scenes/ui/dialog.tscn" id="5_8ce7c"]
 [ext_resource type="PackedScene" uid="uid://bvvkcrl5i3g2m" path="res://scenes/ui/pause-menu-new.tscn" id="5_ukmfw"]
 [ext_resource type="PackedScene" uid="uid://vnhjp6hkeegc" path="res://scenes/ui/vending-buff.tscn" id="6_twdue"]
+[ext_resource type="Script" path="res://scenes/populate_script.gd" id="8_4bvi5"]
 
 [node name="MainLevelScene" type="Node2D"]
 process_priority = -1
@@ -45,7 +46,8 @@ visible = false
 
 [node name="Audio" type="Node2D" parent="."]
 
-[node name="level-script" type="Node2D" parent="."]
+[node name="populate-script" type="Node2D" parent="."]
+script = ExtResource("8_4bvi5")
 
 [connection signal="pressed_button" from="HUD/level0/hud_level" to="HUD" method="_on_hud_level_pressed_button"]
 [connection signal="pauseEventSignal" from="HUD/level1/pause" to="HUD" method="_on_pause_pause_event_signal"]

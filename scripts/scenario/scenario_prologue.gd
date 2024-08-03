@@ -22,13 +22,13 @@ var scene_dialog = [
 ]
 
 func startScenario():
-	var json = JSON.new()
-	var error = json.parse(JSON.stringify(scenario))
-	if error == OK:
-		var jsoned = json.data
-		#print(jsoned)
-	else:
-		printerr("gagal parsing json scenario")
+	#var json = JSON.new()
+	#var error = json.parse(JSON.stringify(scenario))
+	#if error == OK:
+		#var jsoned = json.data
+		##print(jsoned)
+	#else:
+		#printerr("gagal parsing json scenario")
 	
 	scenarioParser = load("res://scripts/scenario/scenario_parser.gd")
 	var parser = scenarioParser.new()

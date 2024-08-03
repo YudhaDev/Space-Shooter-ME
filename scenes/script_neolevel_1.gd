@@ -12,6 +12,7 @@ var scene_dialog = [
 
 func _ready() -> void:
 	#global_dialog.dialogStart(scene_dialog)
+	#OS.delay_msec(5000)
 	var scenario = scenario1.new()
 	scenario.startScenario()
 	pass

@@ -8,11 +8,7 @@ signal mainLevelScriptReady
 
 func _enter_tree() -> void:
 	printerr("enter tree main level")
-	GlobalEnvironment._hud_element = get_child(3)
-	GlobalEnvironment._audio_element = get_child(4)
-	GlobalEnvironment._main_camera = find_child("player", true, false).find_child("Camera2D", true, false)
-	GlobalEnvironment._main_level_scene = get_tree().current_scene
-	GlobalEnvironment._dialog_scene = GlobalEnvironment._hud_element.find_child("dialog", true, false)
+
 	#print(str(get_tree().current_scene))
 	
 func _ready():
