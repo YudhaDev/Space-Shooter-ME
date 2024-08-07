@@ -22,6 +22,7 @@ DebugVars="*res://scripts/debug/GlobalDebugVars.gd"
 BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 GlobalCurrencies="*res://scripts/global/GlobalCurrencies.gd"
 GlobalEnvironment="*res://scripts/global/GlobalEnvironment.gd"
+ScenarioParser="*res://scripts/scenario/scenario_parser.gd"
 
 [display]
 

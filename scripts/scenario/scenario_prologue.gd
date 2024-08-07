@@ -30,9 +30,8 @@ func startScenario():
 	#else:
 		#printerr("gagal parsing json scenario")
 	
-	scenarioParser = load("res://scripts/scenario/scenario_parser.gd")
-	var parser = scenarioParser.new()
-	parser.parse(scenario)
+	scenarioParser = ScenarioParser
+	scenarioParser.parse(scenario)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

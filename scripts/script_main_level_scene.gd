@@ -3,6 +3,7 @@ extends Node
 #@onready var global_env = get_node("/root/GlobalEnvironment") 
 var level1 = preload("res://scenes/neolevel1.tscn")
 var level_instance : Node
+var mutex :Mutex= null
 
 signal mainLevelScriptReady
 
@@ -16,10 +17,19 @@ func _ready():
 	GlobalEnvironment._main_level_scene = get_tree().current_scene
 	load_level(str(GlobalEnvironment._current_level))
 	mainLevelScriptReady.emit()
-	#printerr(GlobalEnvironment._hud_element)
-	#print("main level first")
-	
-	pass # Replace with function body.
+	#mutex = Mutex.new()
+	#var thread = Thread.new()
+	#print("before thread: "+str(GlobalEnvironment._main_level_scene))
+	#var main_scene = GlobalEnvironment._main_level_scene
+	#thread.start(testThread.bind(main_scene))
+
+func testThread(env):
+	while true:
+		mutex.lock()
+		print("inside thread: "+str(env))
+		print("================================")
+		mutex.unlock()
+		OS.delay_msec(1000)
 
 func _input(event: InputEvent) -> void:
 	interactHandling(event)

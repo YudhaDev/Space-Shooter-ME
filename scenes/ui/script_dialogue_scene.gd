@@ -19,6 +19,7 @@ var dialog_middle_format :Control= null
 var dialog_format = "left"
 
 signal job_done
+signal fade_finished
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
@@ -28,8 +29,16 @@ func _ready():
 	dialog_left_format = GlobalEnvironment._main_level_scene.find_child("left_format", true, false)
 	dialog_middle_format = GlobalEnvironment._main_level_scene.find_child("middle_format", true, false)
 	dialog_right_format = GlobalEnvironment._main_level_scene.find_child("right_format", true, false)
+	ScenarioParser.connect("doSomething", doSomething)
 	printerr("done ready dealogue_scene")
-	
+
+func doSomething(string_command):
+	printerr("string command: "+string_command)
+	match string_command:
+		"fadeIn":
+			fadeIn()
+		"fadeOut":
+			fadeOut()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -130,9 +139,6 @@ func _on_timerdisplaytext_timeout():
 			pass
 		"right":
 			pass
-		
-	
-
 
 func changeBackground():
 	pass
@@ -147,13 +153,13 @@ func fadeIn():
 	#if (dialog_hud) != null:
 		#dialog_hud.find_child("fade").play("fade_in")
 	#printerr("tf"+str(GlobalEnvironment._dialog_scene))
-	print("treee"+str(GlobalEnvironment._dialog_scene))
+	#print("treee"+str(GlobalEnvironment._dialog_scene))
 	GlobalEnvironment._dialog_scene.find_child("fade").play("fade_in")
 	#while GlobalEnvironment._dialog_scene.find_child("fade").is_playing():
 		#print(GlobalEnvironment._dialog_scene.find_child("fade").is_playing())
 		#OS.delay_msec(1000)
 		#pass
-	job_done.emit()
+	#job_done.emit()
 	
 func fadeOut():
 	#$fade.play("fade_out")
@@ -167,3 +173,7 @@ func shakeFx() -> Vector2:
 
 func playSfx():
 	pass
+
+func _on_fade_animation_finished(anim_name: StringName) -> void:
+	fade_finished.emit()
+	printerr("ngirim sinyal(dialog scene script)")

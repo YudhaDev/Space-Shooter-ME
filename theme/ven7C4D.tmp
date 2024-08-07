@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b6lg6effeygcp"]
+
+[ext_resource type="FontFile" uid="uid://devhwsyg88yki" path="res://fonts/Roboto/RobotoMono-Medium.ttf" id="1_5dvrk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pibvl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxmnj"]
+bg_color = Color(0.396078, 0.741176, 0.917647, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[resource]
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_5dvrk")
+Label/styles/normal = SubResource("StyleBoxEmpty_pibvl")
+Panel/styles/panel = SubResource("StyleBoxFlat_cxmnj")
