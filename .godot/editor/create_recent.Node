@@ -1,4 +1,6 @@
 Node2D
+AudioStreamPlayer2D
+AudioStreamPlayer
 AnimationPlayer
 RichTextLabel
 TextureRect
@@ -8,7 +10,5 @@ CanvasLayer
 Sprite2D
 Button
 Label
-AudioStreamPlayer
 CollisionShape2D
 Area2D
-Camera2D

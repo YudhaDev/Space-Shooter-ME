@@ -46,6 +46,12 @@ visible = false
 
 [node name="Audio" type="Node2D" parent="."]
 
+[node name="sfx" type="AudioStreamPlayer" parent="Audio"]
+
+[node name="sfx_2d_world" type="AudioStreamPlayer2D" parent="Audio"]
+
+[node name="bgm" type="AudioStreamPlayer" parent="Audio"]
+
 [node name="populate-script" type="Node2D" parent="."]
 script = ExtResource("8_4bvi5")
 

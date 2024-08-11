@@ -23,22 +23,52 @@ signal fade_finished
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	printerr("masuk ready dealogue_scene")
+	#printerr("masuk ready dealogue_scene")
 	GlobalEnvironment._hud_element.find_child("dialog", true, false)
 	#node_global_dialog.connect("animate_the_text", anim_text)
-	dialog_left_format = GlobalEnvironment._main_level_scene.find_child("left_format", true, false)
-	dialog_middle_format = GlobalEnvironment._main_level_scene.find_child("middle_format", true, false)
-	dialog_right_format = GlobalEnvironment._main_level_scene.find_child("right_format", true, false)
+	dialog_left_format = GlobalEnvironment._dialog_scene.find_child("left_format", true, false)
+	dialog_middle_format = GlobalEnvironment._dialog_scene.find_child("middle_format", true, false)
+	dialog_right_format = GlobalEnvironment._dialog_scene.find_child("right_format", true, false)
 	ScenarioParser.connect("doSomething", doSomething)
-	printerr("done ready dealogue_scene")
+	#printerr("done ready dealogue_scene")
 
-func doSomething(string_command):
+func doSomething(string_command, value):
 	printerr("string command: "+string_command)
-	match string_command:
-		"fadeIn":
+	match str(string_command).to_lower():
+		"fade_in":
 			fadeIn()
-		"fadeOut":
+		"fade_out":
 			fadeOut()
+		"narration":
+			middleFormat()
+		"conversation":
+			node_global_dialog.dialogStart(node_global_dialog.process_text(value))
+			anim_text()
+		"background":
+			changeBackground(value)
+		"sfx":
+			#play sfx
+			#printerr("get children: "+str(GlobalEnvironment._audio_element.get_children()))
+			var sfx_ui :AudioStreamPlayer = GlobalEnvironment._audio_element.get_child(0)
+			sfx_ui.stream = GlobalEnvironment.sfx_asset_dictionary.get(str(value))
+			sfx_ui.play()
+			job_done.emit()
+			
+		"delay":
+			#delay the next
+			OS.delay_msec(int(value))
+			job_done.emit()
+		_:
+			printerr("scenario parser command not recognized: " + string_command)
+
+func changeBackground(val):
+	var bgDictionary = GlobalEnvironment.bg_asset_dictionary
+	if bgDictionary.has(str(val)):
+		var bg_texturerect : TextureRect = GlobalEnvironment._dialog_scene.find_child("bg", true, false)
+		bg_texturerect.texture = bgDictionary[val]
+	else:
+		printerr("scene dialog, no bg in dictionary")
+	job_done.emit()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -63,6 +93,7 @@ func middleFormat():
 		dialog_right_format.visible = false
 	else:
 		printerr("isinya null")
+	job_done.emit()
 
 func leftFormat():
 	changeDisplayFormat("left")
@@ -94,23 +125,31 @@ func _on_button_pressed():
 
 #entry point
 func anim_text():
-	#print("yahoooooooooo")
 	isTalking = true
 	$Timerdisplaytext.start()
 
-func anim_text_narration():
-	dialog_format = "center"
-	isTalking = true
-	$Timerdisplaytext.start()
-	pass
+#func anim_text_narration():
+	#dialog_format = "center"
+	#isTalking = true
+	#$Timerdisplaytext.start()
+	#pass
 
 func next_dialog():
-	$Panel_dialog/dialog_text.clear()
+	match dialog_format:
+		"left":
+			dialog_middle_format.find_child("left_dialog_text", true, false).clear()
+		"middle":
+			dialog_middle_format.find_child("middle_text_dialog", true, false).clear()
+		"right":
+			dialog_middle_format.find_child("right_dialog_text", true, false).clear()
+			pass
 	temp = ""
-	node_global_dialog.doDialog()
+	#node_global_dialog.doDialog()
+	job_done.emit()
 
 func stop_talking():
-	$Timerdisplaytext.stop()
+	GlobalEnvironment._dialog_scene.find_child("Timerdisplaytext", true, false).stop()
+	#$Timerdisplaytext.stop()
 	isTalking = false
 	
 func completeDisplaying():
@@ -121,49 +160,41 @@ func completeDisplaying():
 	pass
 
 func _on_timerdisplaytext_timeout():
-	var arrTextToDisplay :Array = node_global_dialog.arrTextToDisplay
+	var arrTextToDisplay :Array = node_global_dialog.getArray()
 	match dialog_format:
 		"left":
 			if arrTextToDisplay.size() != 0:
 				temp = temp + arrTextToDisplay.front()
-				$Panel_dialog/dialog_text.text = temp
+				var middle_text_dialog : RichTextLabel= dialog_middle_format.find_child("middle_text_dialog", true, false)
+				middle_text_dialog.text = temp	
+				#$Panel_dialog/dialog_text.text = temp
 				#"[left]"+temp+"[/left]" 
 				#append_text("[center]"+temp+"[/center]")
 				arrTextToDisplay.remove_at(0)
 			else:
 				stop_talking()
+				next_dialog()
 		"middle":
+			#print("pppp" +str(arrTextToDisplay.size()))
 			if arrTextToDisplay.size() != 0:
 				temp = temp + arrTextToDisplay.front()
+				var middle_text_dialog : RichTextLabel= dialog_middle_format.find_child("middle_text_dialog", true, false)
+				middle_text_dialog.text = temp
+				arrTextToDisplay.remove_at(0)
+			else:
+				stop_talking()
+				next_dialog()
+				#job_done.emit()
 				
-			pass
 		"right":
 			pass
 
-func changeBackground():
-	pass
-
 func fadeIn():
-	#print("masuk fadein")
-	#if GlobalEnvironment._hud_element != null:
-		#dialog_hud = GlobalEnvironment._hud_element.find_child("dialog", true, false)
-	#else:
-		#printerr("hud element tidak ditemukan")
-	
-	#if (dialog_hud) != null:
-		#dialog_hud.find_child("fade").play("fade_in")
-	#printerr("tf"+str(GlobalEnvironment._dialog_scene))
-	#print("treee"+str(GlobalEnvironment._dialog_scene))
 	GlobalEnvironment._dialog_scene.find_child("fade").play("fade_in")
-	#while GlobalEnvironment._dialog_scene.find_child("fade").is_playing():
-		#print(GlobalEnvironment._dialog_scene.find_child("fade").is_playing())
-		#OS.delay_msec(1000)
-		#pass
-	#job_done.emit()
 	
 func fadeOut():
 	#$fade.play("fade_out")
-	pass
+	(GlobalEnvironment._dialog_scene.find_child("fade") as AnimationPlayer).play("fade_out")
 	
 func applyShake():
 	current_shake_strength = base_shake_strenght

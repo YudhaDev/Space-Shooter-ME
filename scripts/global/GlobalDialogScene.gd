@@ -10,7 +10,7 @@ var scene_dialog_template = [
 var currentSceneToPlay = null
 var sceneIndex = 0
 
-var arrTextToDisplay = []
+#var arrTextToDisplay = []
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,26 +18,29 @@ func _process(delta: float) -> void:
 
 func dialogStart(arraySceneDialog: Array):
 	currentSceneToPlay = arraySceneDialog
+	#print("current scene to play: "+str(arraySceneDialog))
 	doDialog()
-	#var _thread = Thread.new()
-	#_thread.start(threadDialog)
-	#thread.start(threadDialog.bind(arraySceneDialog))
-	#pass
+	
 
 func doDialog():
-	var splitted_dialog = currentSceneToPlay[sceneIndex][0].split(":")
-	if splitted_dialog[2] == "conversation":
-		arrTextToDisplay = process_text(currentSceneToPlay[sceneIndex][1])
-		print("masuk")
-		animate_the_text.emit()
-	elif splitted_dialog[2] == "branching":
-		pass
-	elif splitted_dialog[2] == "end":
-		end_the_conversation.emit()
-	sceneIndex +=1
+	if DebugVars.enable_print_debug:
+		print("global dialog scene: "+ str(currentSceneToPlay))
+	#var splitted_dialog = currentSceneToPlay[sceneIndex][0].split(":")
+	#if splitted_dialog[2] == "conversation":
+		#arrTextToDisplay = process_text(currentSceneToPlay[sceneIndex][1])
+		#print("masuk")
+		#animate_the_text.emit()
+	#elif splitted_dialog[2] == "branching":
+		#pass
+	#elif splitted_dialog[2] == "end":
+		#end_the_conversation.emit()
+	#sceneIndex +=1
 
 func process_text(textdialog : String) -> Array:
 	var array :Array = []
 	for huruf in textdialog:
 		array.append(str(huruf))
 	return array
+	
+func getArray() -> Array:
+	return currentSceneToPlay

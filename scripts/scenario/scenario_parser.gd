@@ -5,26 +5,20 @@ extends Node
 var dialog_scene_script = null
 
 var index_now = 0
-var index_total = 0
+var index_max = 0
 
 var threadParser :Thread = null
 var mutexParser : Mutex = null
 
+var array_scenario : Array = []
+
 signal doSomething(string_command)
 
 func _init() -> void:
-	#print("masuk init scenario parser")
-	#printerr("ini dari parser"+str(GlobalEnvironment._main_level_scene))
-	#dialog_scene_script = GlobalEnvironment._hud_element.find_child("dialog", true, false).get_script().new()
 	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	printerr("masuk ready scenario parser")
-	#dialog_scene = dialog_scene_script.new()
-	#dialog_scene.connect("job_done", job_done)
-	#dialog_scene_script = GlobalEnvironment._hud_element.find_child("dialog", true, false).get_script().new()
-	#print(str(dialog_scene_script.connect("fade_finished", animation_finished)))
 	pass
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -34,12 +28,38 @@ func _process(delta: float) -> void:
 func siapkanScriptIni():
 	dialog_scene_script = GlobalEnvironment._hud_element.find_child("dialog", true, false)
 	dialog_scene_script.connect("fade_finished", animation_finished)
+	dialog_scene_script.connect("job_done", job_done)
 
 func animation_finished():
-	printerr("animasi sudah selesai cuy")
+	print("animasi selesai")
+	nextIndex()
 
 func job_done():
+	print("job selesai")
+	nextIndex()
+
+func nextIndex():
+	if (index_now + 1) < index_max:
+		index_now +=1
+		#do conversation
+		printerr("next phase")
+		parse(array_scenario)
+	else:
+		printerr("end phase")
+		end()
+
+func end():
+	#todo list
+	#hide semua dialog ui
+	#resume level
 	pass
+
+func start(array : Array):
+	index_now = 0
+	index_max = array.size()
+	array_scenario = array
+	print("array max %" + str(index_max))
+	parse(array_scenario)
 
 func parse(array : Array):
 	if dialog_scene_script == null:
@@ -47,38 +67,33 @@ func parse(array : Array):
 		
 	if threadParser == null:
 		threadParser = Thread.new()
-
-	for arr in array:
-		var format = arr[0].split(":")
-		var value = arr[1]
-		#print(str(GlobalEnvironment._main_level_scene.find_child("dialog", true, false).get_script()))
-		#var a = dialog_scene.new()
-		#a.fadeIn()
-		match format[2]:
-			"fade_in":
-				doSomething.emit("fadeIn")
-				#dialog_scene_script.fadeIn()
-				#print("sebelum thread" + str(GlobalEnvironment._main_level_scene))
-				#call_deferred("sayHello")
-				#threadParser.start(
-					#sayHello
-				#)
-				#threadParser.start(dialog_scene.fadeIn)
-				#dialog_scene.fadeIn()
-			"fade_out":
-				dialog_scene_script.fadeOut()
-			"narration":
-				dialog_scene_script.middleFormat()
-			"background":
-				#set background
-				pass
-			"x":
-				#do nothing
-				pass
-			"":
-				#do nothing
-				pass
-	pass
+	var array_now = array[index_now]
+	var format = array_now[0].split(":")
+	var value = array_now[1]
+	
+	#match format[2]:
+		#"fade_in":
+			#doSomething.emit(format[2], value)
+		#"fade_out":
+			#dialog_scene_script.fadeOut()
+		#"narration":
+			#doSomething.emit(format[2], value)
+		#"conversation":
+			#doSomething.emit(format[2], value)
+		#"background":
+			##set background
+			#doSomething.emit(for)
+			#pass
+		#"x":
+			##do nothing
+			#pass
+		#"":
+			##do nothing
+			#pass
+		#_:
+			#pass
+			
+	doSomething.emit(format[2], value)
 	
 func sayHello():
 	while true:

@@ -19,6 +19,20 @@ var bg_asset_dictionary = {
 	"bg_sky1" : load("res://images/sky.jpg"),
 }
 
+var sfx_ui_asset_dictionary = {
+	"sfx_ui_button_click" : load("res://audios/sfx/ui/SFX-UI-button-click.ogg"),
+	"sfx_ui_button_click_cancel" : load("res://audios/sfx/ui/SFX-UI-button-click-cancel.ogg"),
+	"sfx_ui_button_click_yes" : load("res://audios/sfx/ui/SFX-UI-button-click-yes.ogg")
+}
+
+var sfx_asset_dictionary = {
+	"sfx_gunshot" : load("res://audios/sfx/sfx-gunshot.ogg")
+}
+
+var bgm_asset_dictionary = {
+	
+}
+
 #formatnya idbuff:namabuff:totalstagenya:stage1buff,stage2buff,stage3buff... so on. jika ada tanda $ berrti peningkatan stagenya sama untuk semua sisa stagenya. contoh pada buff player-hp-up, dengan total stage 5 dan 10$. berrti tiap stage akan menambah 10hp terus dengan sama. jika ada tanda "stack" diakhir brrti tipe buffnya itu stacking, misal stage 1 nambah hp 10, upgrade ke stage 2 yg mana hp +10 juga brrti total penambahan hpnya skrg +20
 var playerBasedBuffs = ["player01:player-hp-up:5:10$:stack", 
 "player02:player-movspeed-up:5:2,3,4,5,6", 
