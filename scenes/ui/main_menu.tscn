@@ -209,7 +209,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "mainmenu_quit_btn"
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sfx" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_e8oel")
 autoplay = true
 

@@ -51,6 +51,7 @@ func nextIndex():
 func end():
 	#todo list
 	#hide semua dialog ui
+	GlobalEnvironment._dialog_scene.find_child("dialog_formats", true, false).visible = false
 	#resume level
 	pass
 

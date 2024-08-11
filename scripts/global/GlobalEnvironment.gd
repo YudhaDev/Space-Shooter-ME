@@ -15,6 +15,9 @@ var _audio_element = null
 var _main_camera = null
 var _main_level_scene : Node = null
 
+#Buat sfx
+var _ui_selected_sfx = ""
+
 var bg_asset_dictionary = {
 	"bg_sky1" : load("res://images/sky.jpg"),
 }

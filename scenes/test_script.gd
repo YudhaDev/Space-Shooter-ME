@@ -13,6 +13,23 @@ var ui_selected : String = ""
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	mainLevel.connect("mainLevelScriptReady", mainLevelScriptReady)
+
+func _input(event: InputEvent) -> void:
+	var sfx_player : AudioStreamPlayer = GlobalEnvironment._audio_element.get_child(0)
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT:
+			match GlobalEnvironment._ui_selected_sfx:
+				"yes_confirm":
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_yes")
+					sfx_player.play()
+				"cancel_confirm":
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_cancel")
+					sfx_player.play()
+				"":
+					pass
+				_:
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
+					sfx_player.play()
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

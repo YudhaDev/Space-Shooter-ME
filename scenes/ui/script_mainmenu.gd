@@ -6,6 +6,9 @@ var main_ui_selected = ""
 @onready var ui_gallery : Control = $another_hud/MainmenuGallery
 @onready var ui_setting : Control = $another_hud/Mainmenu_setting
 
+var sfx_player : AudioStreamPlayer = null
+
+
 func _ready():
 	TranslationServer.set_locale("en")
 	ui_gallery.connect("gallery_back_signal", gallery_back_signal)
@@ -32,9 +35,26 @@ func _on_button_pressed():
 	pass # Replace with function body.
 
 func _input(event: InputEvent) -> void:
+	if sfx_player ==null:
+		sfx_player = find_child("sfx", true, false)
+	
 	if event is InputEventMouseButton:
 		if event.is_released() && event.button_index == MOUSE_BUTTON_LEFT:
+			match GlobalEnvironment._ui_selected_sfx:
+				"yes_confirm":
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_yes")
+					sfx_player.play()
+				"cancel_confirm":
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_cancel")
+					sfx_player.play()
+				"":
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
+					sfx_player.play()
+					pass
+				_:
+					pass
 			mainmenuUiHandler()
+	
 
 func mainmenuUiHandler():
 	
