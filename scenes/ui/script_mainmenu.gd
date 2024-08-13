@@ -48,16 +48,14 @@ func _input(event: InputEvent) -> void:
 					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_cancel")
 					sfx_player.play()
 				"":
-					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
-					sfx_player.play()
 					pass
 				_:
-					pass
+					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
+					sfx_player.play()
 			mainmenuUiHandler()
 	
 
 func mainmenuUiHandler():
-	
 	match main_ui_selected:
 				"gallery":
 					#show gallery

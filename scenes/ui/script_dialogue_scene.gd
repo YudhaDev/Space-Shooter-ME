@@ -30,7 +30,19 @@ func _ready():
 	dialog_middle_format = GlobalEnvironment._dialog_scene.find_child("middle_format", true, false)
 	dialog_right_format = GlobalEnvironment._dialog_scene.find_child("right_format", true, false)
 	ScenarioParser.connect("doSomething", doSomething)
+	ScenarioParser.connect("endScene", endScene)
 	#printerr("done ready dealogue_scene")
+
+func endScene():
+	hideDialog(dialog_left_format)
+	hideDialog(dialog_middle_format)
+	hideDialog(dialog_right_format)
+
+func hideDialog(format : Control):
+	format.visible = false
+
+func showDialog(format : Control):
+	format.visible = true
 
 func doSomething(string_command, value):
 	printerr("string command: "+string_command)
@@ -88,24 +100,26 @@ func resizePanelDialog():
 func middleFormat():
 	changeDisplayFormat("middle")
 	if dialog_left_format != null:
-		dialog_left_format.visible = false
-		dialog_middle_format.visible = true
-		dialog_right_format.visible = false
+		hideDialog(dialog_left_format)
+		showDialog(dialog_middle_format)
+		hideDialog(dialog_right_format)
 	else:
 		printerr("isinya null")
 	job_done.emit()
 
 func leftFormat():
 	changeDisplayFormat("left")
-	dialog_left_format.visible = true
-	dialog_middle_format.visible = false
-	dialog_right_format.visible = false
+	showDialog(dialog_left_format)
+	hideDialog(dialog_middle_format)
+	hideDialog(rightFormat())
+	job_done.emit()
 
 func rightFormat():
 	changeDisplayFormat("right")
-	dialog_left_format.visible = false
-	dialog_middle_format.visible = false
-	dialog_right_format.visible = true
+	hideDialog(dialog_left_format)
+	hideDialog(dialog_middle_format)
+	showDialog(dialog_right_format)
+	job_done.emit()
 
 func changeDisplayFormat(format: String):
 	match format:

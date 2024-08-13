@@ -1,6 +1,8 @@
+HSlider
+Label
+AudioStreamPlayer
 Node2D
 AudioStreamPlayer2D
-AudioStreamPlayer
 AnimationPlayer
 RichTextLabel
 TextureRect
@@ -9,6 +11,5 @@ Control
 CanvasLayer
 Sprite2D
 Button
-Label
 CollisionShape2D
 Area2D

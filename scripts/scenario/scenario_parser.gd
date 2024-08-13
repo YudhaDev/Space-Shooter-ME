@@ -13,6 +13,7 @@ var mutexParser : Mutex = null
 var array_scenario : Array = []
 
 signal doSomething(string_command)
+signal endScene()
 
 func _init() -> void:
 	pass
@@ -52,14 +53,17 @@ func end():
 	#todo list
 	#hide semua dialog ui
 	GlobalEnvironment._dialog_scene.find_child("dialog_formats", true, false).visible = false
+	
+	endScene.emit()
 	#resume level
 	pass
-
+#entry point
 func start(array : Array):
+	GlobalEnvironment._dialog_scene.visible = true
 	index_now = 0
 	index_max = array.size()
 	array_scenario = array
-	print("array max %" + str(index_max))
+	#print("array max %" + str(index_max))
 	parse(array_scenario)
 
 func parse(array : Array):
@@ -68,32 +72,11 @@ func parse(array : Array):
 		
 	if threadParser == null:
 		threadParser = Thread.new()
+	#membaca command
 	var array_now = array[index_now]
 	var format = array_now[0].split(":")
 	var value = array_now[1]
-	
-	#match format[2]:
-		#"fade_in":
-			#doSomething.emit(format[2], value)
-		#"fade_out":
-			#dialog_scene_script.fadeOut()
-		#"narration":
-			#doSomething.emit(format[2], value)
-		#"conversation":
-			#doSomething.emit(format[2], value)
-		#"background":
-			##set background
-			#doSomething.emit(for)
-			#pass
-		#"x":
-			##do nothing
-			#pass
-		#"":
-			##do nothing
-			#pass
-		#_:
-			#pass
-			
+	#emit ke script dialog scene
 	doSomething.emit(format[2], value)
 	
 func sayHello():

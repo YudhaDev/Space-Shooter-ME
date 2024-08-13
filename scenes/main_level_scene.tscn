@@ -31,8 +31,10 @@ script = ExtResource("3_7guvl")
 [node name="hud_level" parent="HUD/level0" instance=ExtResource("2_uri4q")]
 
 [node name="dialog" parent="HUD/level0" instance=ExtResource("5_8ce7c")]
+visible = false
 
 [node name="level1" type="CanvasLayer" parent="HUD"]
+visible = false
 
 [node name="pause" parent="HUD/level1" instance=ExtResource("5_ukmfw")]
 process_mode = 2
