@@ -21,6 +21,20 @@ var _bgm_volume = 0
 #Buat sfx
 var _ui_selected_sfx = null
 
+#buat settingan languange dan fps
+var _current_lang = "en"
+var _current_fps = 60
+
+var language_dictionary = {
+	"id" : "Indonesian",
+	"en" : "English"
+}
+
+var fps_dictionary = {
+	"half" : 30,
+	"full" : 60
+}
+
 var bg_asset_dictionary = {
 	"bg_sky1" : load("res://images/sky.jpg"),
 }

@@ -1,3 +1,9 @@
+Panel
+Button
+Control
+VBoxContainer
+CenterContainer
+TextureRect
 HSlider
 Label
 AudioStreamPlayer
@@ -5,11 +11,4 @@ Node2D
 AudioStreamPlayer2D
 AnimationPlayer
 RichTextLabel
-TextureRect
-Panel
-Control
 CanvasLayer
-Sprite2D
-Button
-CollisionShape2D
-Area2D

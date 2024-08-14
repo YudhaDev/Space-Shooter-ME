@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cmufxfs3lidl4"]
+[gd_scene load_steps=10 format=3 uid="uid://cmufxfs3lidl4"]
 
 [ext_resource type="Script" path="res://scenes/ui/script_mainmenu.gd" id="1_8u70x"]
 [ext_resource type="Texture2D" uid="uid://c1v40u34i17f1" path="res://assets/misc/mainmenu-art.png" id="2_4ytev"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://8y47ra3tp5sl" path="res://theme/ui-text-dialog.tres" id="5_o8by1"]
 [ext_resource type="PackedScene" uid="uid://cty55w37pecb6" path="res://scenes/ui/mainmenu_gallery.tscn" id="7_br607"]
 [ext_resource type="PackedScene" uid="uid://bk45ujrjmxmmb" path="res://scenes/ui/mainmenu_setting.tscn" id="8_kwn2l"]
+[ext_resource type="Texture2D" uid="uid://du5vcb7pfx5af" path="res://assets/UI/logo.png" id="9_su8p7"]
 
 [node name="mainmenu" type="Control"]
 layout_mode = 3
@@ -224,6 +225,15 @@ visible = false
 
 [node name="Mainmenu_setting" parent="another_hud" instance=ExtResource("8_kwn2l")]
 visible = false
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 96.0
+offset_right = 441.0
+offset_bottom = 272.0
+texture = ExtResource("9_su8p7")
+expand_mode = 1
 
 [connection signal="pressed" from="mainmenu_play_btn" to="." method="_on_button_pressed"]
 [connection signal="mouse_entered" from="gallery_btn" to="." method="_on_gallery_btn_mouse_entered"]

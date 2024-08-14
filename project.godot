@@ -23,6 +23,7 @@ BetterTerrain="*res://addons/better-terrain/BetterTerrain.gd"
 GlobalCurrencies="*res://scripts/global/GlobalCurrencies.gd"
 GlobalEnvironment="*res://scripts/global/GlobalEnvironment.gd"
 ScenarioParser="*res://scripts/scenario/scenario_parser.gd"
+GlobalSfxEngine="*res://scripts/global/GlobalSfxEngine.gd"
 
 [display]
 

@@ -7,7 +7,12 @@ var slider_sfx :HSlider= null
 @onready var bgm_object :AudioStreamPlayer= get_tree().root.find_child("bgm", true, false)
 @onready var sfx_object :AudioStreamPlayer= get_tree().root.find_child("sfx", true, false)
 
+@onready var label_language_value :Label = get_tree().current_scene.find_child("label_language_value", true, false)
+
 var delta_stack :float = 0
+
+var temp_language = ""
+var temp_fps = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,6 +21,9 @@ func _ready() -> void:
 	
 	slider_bgm.value = GlobalEnvironment._bgm_volume
 	slider_sfx.value = GlobalEnvironment._sfx_volume
+	
+	#update label language and fps
+	label_language_value.text = GlobalEnvironment.language_dictionary.get(GlobalEnvironment._current_lang)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -38,3 +46,24 @@ func updateTheVolume():
 
 func _on_back_btn_button_up() -> void:
 	setting_back_signal.emit()
+
+func languageHandler(string_cmd:String):
+	match string_cmd.to_lower():
+		"next":
+			var bla = GlobalEnvironment.language_dictionary.get(GlobalEnvironment._current_lang)
+			print("bla: "+str(GlobalEnvironment.language_dictionary.keys().find(GlobalEnvironment._current_lang)))
+		"prev":
+			pass
+
+func _on_language_panel_next_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
+			GlobalSfxEngine.playSfx("default")
+			languageHandler("next")
+
+
+func _on_language_panel_prev_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
+			GlobalSfxEngine.playSfx("default")
+			languageHandler("prev")

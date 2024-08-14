@@ -40,19 +40,20 @@ func _input(event: InputEvent) -> void:
 	
 	if event is InputEventMouseButton:
 		if event.is_released() && event.button_index == MOUSE_BUTTON_LEFT:
-			match GlobalEnvironment._ui_selected_sfx:
-				"yes_confirm":
-					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_yes")
-					sfx_player.play()
-				"cancel_confirm":
-					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_cancel")
-					sfx_player.play()
-				"":
-					pass
-				_:
-					sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
-					sfx_player.play()
+			#match GlobalEnvironment._ui_selected_sfx:
+				#"yes_confirm":
+					#sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_yes")
+					#sfx_player.play()
+				#"cancel_confirm":
+					#sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click_cancel")
+					#sfx_player.play()
+				#"default":
+					#sfx_player.stream = GlobalEnvironment.sfx_ui_asset_dictionary.get("sfx_ui_button_click")
+					#sfx_player.play()
+				#_:
+					#pass
 			mainmenuUiHandler()
+			#GlobalEnvironment._ui_selected_sfx = null
 	
 
 func mainmenuUiHandler():
