@@ -15,15 +15,16 @@ var _audio_element = null
 var _main_camera = null
 var _main_level_scene : Node = null
 
+#for audio settings
 var _sfx_volume = 0
 var _bgm_volume = 0
 
 #Buat sfx
-var _ui_selected_sfx = null
+var _ui_selected_sfx = null #deprecated- remove this
 
 #buat settingan languange dan fps
 var _current_lang = "en"
-var _current_fps = 60
+var _current_fps = "full"
 
 var language_dictionary = {
 	"id" : "Indonesian",

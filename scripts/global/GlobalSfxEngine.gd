@@ -33,5 +33,4 @@ func playSfx(sfx_type: String):
 			sfx_player.play()
 		_:
 			pass
-	#sfx_player.emit_signal("finished")
 	
