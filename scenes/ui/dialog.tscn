@@ -410,7 +410,6 @@ grow_vertical = 2
 texture = ExtResource("2_gqa8g")
 
 [node name="left_format" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -657,6 +656,7 @@ grow_vertical = 2
 text = "SOMETHING TEXT"
 
 [node name="canvaslayer_efek" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="overlay" type="Sprite2D" parent="canvaslayer_efek"]
 modulate = Color(0, 0, 0, 1)

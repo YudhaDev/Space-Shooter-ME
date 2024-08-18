@@ -20,7 +20,6 @@ anchor_right = 0.9
 anchor_bottom = 0.899297
 grow_horizontal = 2
 grow_vertical = 2
-metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Panel"]
 layout_mode = 1

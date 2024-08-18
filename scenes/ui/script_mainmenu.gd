@@ -101,3 +101,10 @@ func _on_quit_btn_mouse_entered() -> void:
 
 func _on_quit_btn_mouse_exited() -> void:
 	main_ui_selected = ""
+
+
+func _on_credit_btn_gui_input(event: InputEvent) -> void:
+	if event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
+			GlobalSfxEngine.playSfx("default")
+			find_child("MainmenuCredits", true, false).visible = true

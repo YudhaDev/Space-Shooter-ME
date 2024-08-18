@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cmufxfs3lidl4"]
+[gd_scene load_steps=11 format=3 uid="uid://cmufxfs3lidl4"]
 
 [ext_resource type="Script" path="res://scenes/ui/script_mainmenu.gd" id="1_8u70x"]
 [ext_resource type="Texture2D" uid="uid://c1v40u34i17f1" path="res://assets/misc/mainmenu-art.png" id="2_4ytev"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cfqt737jom1t8" path="res://audios/bgm/main-bgm.ogg" id="5_e8oel"]
 [ext_resource type="Theme" uid="uid://8y47ra3tp5sl" path="res://theme/ui-text-dialog.tres" id="5_o8by1"]
 [ext_resource type="PackedScene" uid="uid://cty55w37pecb6" path="res://scenes/ui/mainmenu_gallery.tscn" id="7_br607"]
+[ext_resource type="PackedScene" uid="uid://uje0sbj0mfs8" path="res://scenes/ui/mainmenu_credits.tscn" id="8_e14p7"]
 [ext_resource type="PackedScene" uid="uid://bk45ujrjmxmmb" path="res://scenes/ui/mainmenu_setting.tscn" id="8_kwn2l"]
 [ext_resource type="Texture2D" uid="uid://du5vcb7pfx5af" path="res://assets/UI/logo.png" id="9_su8p7"]
 
@@ -117,6 +118,35 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
+[node name="credit_btn" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 176.0
+offset_top = 389.0
+offset_right = 226.0
+offset_bottom = 414.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_dwg5m")
+
+[node name="Label" type="Label" parent="credit_btn"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("3_dwg5m")
+theme_override_font_sizes/font_size = 9
+text = "CREDIT"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
 [node name="quit_btn" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -222,6 +252,9 @@ autoplay = true
 [node name="MainmenuGallery" parent="another_hud" instance=ExtResource("7_br607")]
 visible = false
 
+[node name="MainmenuCredits" parent="another_hud" instance=ExtResource("8_e14p7")]
+visible = false
+
 [node name="Mainmenu_setting" parent="another_hud" instance=ExtResource("8_kwn2l")]
 visible = false
 
@@ -239,6 +272,7 @@ expand_mode = 1
 [connection signal="mouse_exited" from="gallery_btn" to="." method="_on_gallery_btn_mouse_exited"]
 [connection signal="mouse_entered" from="setting_btn" to="." method="_on_setting_btn_mouse_entered"]
 [connection signal="mouse_exited" from="setting_btn" to="." method="_on_setting_btn_mouse_exited"]
+[connection signal="gui_input" from="credit_btn" to="." method="_on_credit_btn_gui_input"]
 [connection signal="mouse_entered" from="quit_btn" to="." method="_on_quit_btn_mouse_entered"]
 [connection signal="mouse_exited" from="quit_btn" to="." method="_on_quit_btn_mouse_exited"]
 [connection signal="pressed" from="mainmenu_galery_btn" to="." method="_on_button_pressed"]

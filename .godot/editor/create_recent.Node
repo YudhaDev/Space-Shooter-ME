@@ -1,11 +1,11 @@
+VBoxContainer
+Label
+TextureRect
 Panel
 Button
 Control
-VBoxContainer
 CenterContainer
-TextureRect
 HSlider
-Label
 AudioStreamPlayer
 Node2D
 AudioStreamPlayer2D
